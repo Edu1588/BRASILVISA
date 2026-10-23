@@ -7,8 +7,24 @@ export default defineConfig({
   site: 'https://www.migrafacil.net',
   trailingSlash: 'ignore',
   devToolbar: { enabled: false },
+  // CSP com hashes gerados pelo Astro para os scripts e estilos inline (ilhas, ClientRouter).
+  security: {
+    csp: {
+      directives: [
+        "default-src 'self'",
+        "img-src 'self' data:",
+        "font-src 'self'",
+        "connect-src 'self'",
+        "frame-src https://maps.google.com https://www.google.com",
+        "base-uri 'self'",
+        "form-action 'self'",
+        "object-src 'none'",
+      ],
+    },
+  },
   integrations: [
     react(),
   ],
-  vite: { plugins: [tailwindcss()] },
+  // assetsInlineLimit 0: nenhuma fonte vira data: no CSS (a CSP só permite fontes do próprio site).
+  vite: { plugins: [tailwindcss()], build: { assetsInlineLimit: 0 } },
 });

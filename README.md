@@ -3,7 +3,7 @@
 Site da Migrafácil (equipe RNE Brasil): CRNM, autorização de residência, naturalização e visto americano. Português, inglês e chinês simplificado.
 
 ## Estrutura
-- `app/`: código do site (Astro 5, React, Tailwind CSS v4, Lenis, GSAP, three.js)
+- `app/`: código do site (Astro 7, React, Tailwind CSS v4, Lenis, GSAP, three.js)
 - `BRIEFING.md`, `PESQUISA.md`, `COPY.md`, `PRODUCT.md`, `DESIGN.md`, `REVISAO.md`: documentos de cada fase do projeto
 - `PROGRESSO.md`: andamento das fases e o que o cliente ainda precisa fornecer
 

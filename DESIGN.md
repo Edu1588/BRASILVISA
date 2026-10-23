@@ -55,7 +55,7 @@ Páginas de serviço: herói curto com breadcrumb, depois blocos de leitura em c
 Um único momento orquestrado: na carga da home, a ficha SVG aparece, o check carmim é desenhado sobre ela (GSAP, DrawSVG por stroke-dashoffset) e o título entra por linhas (SplitText). Nada de fade em cada seção. Interações respondem ao usuário: acordeão abre com altura animada, botão confirma ao enviar. `prefers-reduced-motion` desliga tudo.
 
 ## Stack aplicada
-- Astro 5 + React só onde há interação (acordeão, seletor de idioma, formulário), carregado com client:visible.
+- Astro 5 + React (atualizado para Astro 7 na Fase 9 por segurança; ver SEGURANCA.md) só onde há interação (acordeão, seletor de idioma, formulário), carregado com client:visible.
 - Tailwind CSS v4 com os tokens acima em @theme.
 - Lenis para rolagem suave (desligado com reduced motion).
 - GSAP + SplitText no herói.

@@ -11,8 +11,8 @@ Referência atual: https://www.migrafacil.net/asessoria-em-rne/
 | 5. Construção | concluída | Astro 5 + React + Tailwind v4 + Lenis + GSAP em app/; 11 páginas x 3 idiomas + 404 (34 páginas); build sem erros. Azul noite #03034A do site de referência aplicado no herói e seções escuras, a pedido |
 | 6. Extras | concluída | Elemento 3D (three.js) no herói da home: carteira e passaporte com espessura, inclinação pelo mouse e brilho holográfico, textura gerada da própria ilustração SVG; só desktop com WebGL e sem movimento reduzido; carregado sob demanda (141 kB gzip) |
 | 7. Revisão de design | concluída | REVISAO.md: nenhum crítico; 4 importantes e 2 polimentos corrigidos, 2 itens justificados; contraste AA em 13 páginas |
-| 8. SEO | aguardando ok | SEO.md: sitemap.xml com hreflang, robots.txt, llms.txt, títulos e descriptions ajustados, 30 imagens Open Graph, schema ProfessionalService + Service; auditoria sem itens críticos |
-| 9. Segurança e entrega | pendente | |
+| 8. SEO | concluída | SEO.md: sitemap.xml com hreflang, robots.txt, llms.txt, títulos e descriptions ajustados, 30 imagens Open Graph, schema ProfessionalService + Service; auditoria sem itens críticos |
+| 9. Segurança e entrega | aguardando ok | SEGURANCA.md: nenhuma falha crítica, 0 vulnerabilidades (Astro 5 atualizado para 7 por alerta crítico sem correção na linha 5), CSP com hashes, cabeçalhos HTTP; ENTREGA.md com o que depende do cliente |
 
 ## Ajustes pedidos durante a Fase 8
 - Botões de WhatsApp na cor oficial (#25D366) com o logo; botão redondo fixo no canto inferior direito (desktop)
