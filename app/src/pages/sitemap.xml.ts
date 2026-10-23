@@ -4,7 +4,7 @@ import { LANGS, SLUGS, href, type PageKey } from '../i18n';
 
 const HREFLANG = { pt: 'pt-BR', en: 'en', zh: 'zh-CN' } as const;
 const PAGES = (Object.keys(SLUGS) as PageKey[]).filter((p) => p !== 'obrigado');
-const PRIORITY: Partial<Record<PageKey, string>> = { home: '1.0', crnm: '0.9', naturalizacao: '0.9', residencia: '0.9', vistoAmericano: '0.9', privacidade: '0.3' };
+const PRIORITY: Partial<Record<PageKey, string>> = { home: '0.9', investidor: '1.0', imobiliario: '0.9', reuniao: '0.9', chineses: '0.9', privacidade: '0.3' };
 
 export const GET: APIRoute = ({ site }) => {
   const abs = (path: string) => new URL(path, site).href;

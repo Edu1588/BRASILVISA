@@ -1,30 +1,15 @@
-# SEO (Fase 8)
+# SEO e segurança
 
-Data: 23/10/2026. O comando /auditar-site e as skills seo, seo-schema, seo-local e seo-sitemap não estão instalados neste ambiente; a auditoria foi feita com script próprio sobre a build (34 páginas).
+## SEO
+- sitemap.xml (30 URLs, hreflang pt-BR, en, zh-CN, x-default), robots.txt, llms.txt.
+- Títulos até 60 e descriptions até 160 caracteres em PT e EN, todos únicos.
+- Canonical, Open Graph (30 imagens) e Twitter card em todas as páginas.
+- Schema ProfessionalService (São Paulo, CNPJ, fundadora), Service e FAQPage em cada landing page, BreadcrumbList.
+- Auditoria por script sobre `app/dist`: 34 páginas, nenhum item crítico, nenhum travessão, nenhuma menção à Migrafácil.
 
-## Entregue
-| Item | Onde | Situação |
-|---|---|---|
-| sitemap.xml | `app/src/pages/sitemap.xml.ts` → `/sitemap.xml` | 30 URLs (10 páginas x 3 idiomas), cada uma com hreflang pt-BR, en, zh-CN e x-default. Página Obrigado fora |
-| robots.txt | `app/public/robots.txt` | Libera tudo, bloqueia /obrigado nos 3 idiomas, aponta o sitemap |
-| llms.txt | `app/public/llms.txt` | Resumo da empresa, aviso legal, links dos serviços e dos outros idiomas |
-| Títulos e descriptions | `app/src/i18n/*.ts` (meta) | Únicos em todas as páginas; títulos até 60 caracteres e descriptions até 160 em PT e EN |
-| Canonical e hreflang | `app/src/layouts/Base.astro` | Em todas as páginas indexáveis, com barra final igual ao formato da build |
-| Alt text | Todas as imagens | Logo e fotos com alt localizado; ilustrações decorativas com aria-hidden |
-| Open Graph | `tools/og.py` → `app/public/og/<idioma>/<página>.png` | 30 imagens 1200x630 com o título da página; og:image, og:image:alt e Twitter card em todas as páginas |
-| Schema local | `SchemaOrg.astro` | ProfessionalService com endereço de Sumaré, telefone, email, idiomas, fundador e redes sociais |
-| Schema de serviço | `ServiceSchema.astro` | Service nas 4 páginas de serviço, ligado à empresa |
-| Outros schemas | | BreadcrumbList nas páginas internas; FAQPage na página de Perguntas |
-| noindex | Obrigado e 404 | Fora do índice |
-
-## Auditoria (script sobre app/dist)
-Verifica: title e description presentes e no tamanho, canonical, hreflang, og:image existente, exatamente um h1, atributo lang, alt em toda imagem e JSON-LD válido.
-Resultado: 34 páginas, nenhum item crítico.
-
-## Pendências que dependem do cliente
-- Horário de atendimento (entra em `openingHours` do schema e no rodapé)
-- Coordenadas do escritório, se quiser o pino exato no schema (`geo`)
-- Link do perfil do Google (avaliações)
-- Google Search Console: enviar `https://www.migrafacil.net/sitemap.xml` depois da publicação
-- Google Analytics ou equivalente, com banner de cookies (a Política de Privacidade já prevê)
-- Revisão das imagens Open Graph em chinês por um falante nativo
+## Segurança
+- `npm audit`: 0 vulnerabilidades.
+- CSP com hashes (Astro `security.csp`), sem fontes `data:`; testada na build de produção sem violações.
+- `.htaccess` (HTTPS, cabeçalhos, 404) e `_headers` (Netlify/Cloudflare).
+- Formulário sem upload de documentos, com honeypot e consentimento; sem endpoint configurado abre o WhatsApp.
+- Compliance de anúncio (PESQUISA.md, seção 6): sem promessa de resultado, sem "advogados" como produto, aviso fixo de empresa privada sem vínculo com órgãos públicos.

@@ -89,7 +89,7 @@ export default function ContactForm({ labels, privacyHref, thanksHref, whatsapp,
       </label>
       <input type="text" name="empresa" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
       <label className="flex items-start gap-3 text-sm sm:col-span-2">
-        <input type="checkbox" name="consentimento" required className="mt-1 h-5 w-5 accent-[#242374]" />
+        <input type="checkbox" name="consentimento" required className="mt-1 h-5 w-5 accent-[#cb3438]" />
         <span>
           <a href={privacyHref} className="text-link">{labels.consent}</a>
         </span>

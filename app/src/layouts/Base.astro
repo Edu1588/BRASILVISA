@@ -1,5 +1,6 @@
 ---
-import '@fontsource-variable/schibsted-grotesk';
+import '@fontsource-variable/montserrat';
+import '@fontsource-variable/heebo';
 import '../styles/global.css';
 import noto400 from '@fontsource/noto-sans-sc/400.css?url';
 import noto700 from '@fontsource/noto-sans-sc/700.css?url';
@@ -10,6 +11,7 @@ import MobileCta from '../components/MobileCta.astro';
 import WaFloat from '../components/WaFloat.astro';
 import SchemaOrg from '../components/SchemaOrg.astro';
 import { DICTS, LANGS, href, type Lang, type PageKey } from '../i18n';
+import type { Dict } from '../i18n/pt';
 
 interface Props {
   lang: Lang;
@@ -17,8 +19,10 @@ interface Props {
   title: string;
   description: string;
   noindex?: boolean;
+  /** Mensagem pronta do WhatsApp usada no cabeçalho, na barra do celular e no botão fixo. */
+  wa?: keyof Dict['wa'];
 }
-const { lang, page, title, description, noindex = false } = Astro.props;
+const { lang, page, title, description, noindex = false, wa = 'geral' } = Astro.props;
 const t = DICTS[lang];
 const site = Astro.site!;
 const canonical = page === '404' ? undefined : new URL(href(lang, page), site).href;
@@ -47,9 +51,9 @@ const ogImage = new URL(`/og/${lang}/${ogKey}.png`, site).href;
     {lang === 'zh' && <link rel="stylesheet" href={noto400} />}
     {lang === 'zh' && <link rel="stylesheet" href={noto700} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="theme-color" content="#242374" />
+    <meta name="theme-color" content="#33373d" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Migrafácil" />
+    <meta property="og:site_name" content="BrasilVisa" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     {canonical && <meta property="og:url" content={canonical} />}
@@ -68,13 +72,13 @@ const ogImage = new URL(`/og/${lang}/${ogKey}.png`, site).href;
   </head>
   <body class="flex flex-col">
     <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 btn btn-light">{t.nav.skip}</a>
-    <Header lang={lang} page={page} />
+    <Header lang={lang} page={page} wa={wa} />
     <main id="conteudo" class="flex-1">
       <slot />
     </main>
     <Footer lang={lang} />
-    <MobileCta lang={lang} />
-    <WaFloat lang={lang} />
+    <MobileCta lang={lang} wa={wa} />
+    <WaFloat lang={lang} wa={wa} />
     <script>
       import Lenis from 'lenis';
       import { ScrollTrigger } from 'gsap/ScrollTrigger';

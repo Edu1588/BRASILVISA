@@ -8,9 +8,7 @@ const t = DICTS[lang];
 {
   href && (
     <p class="source-stamp mt-3">
-      <span>{t.source}:</span>
-      <a href={href} target="_blank" rel="noopener">{label}</a>
-      {dated && <span>, {t.checkedOn}</span>}
+      {t.source}: <a href={href} target="_blank" rel="noopener">{label}</a>{dated && `, ${t.checkedOn}`}
     </p>
   )
 }

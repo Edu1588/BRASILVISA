@@ -3,18 +3,20 @@
 @source "../components";
 
 @theme {
-  --color-tinta: #242374;
-  --color-tinta-escura: #17164d;
-  --color-noite: #03034a;
-  --color-carmim: #930c39;
-  --color-carmim-vivo: #b5103f;
-  --color-papel: #f4f5fa;
-  --color-grafite: #1d1e33;
-  --color-grafite-suave: #4a4c66;
-  --color-guilloche: #c8cbe4;
+  /* Paleta BrasilVisa (site atual brasillvisa.com.br). Os nomes dos tokens vêm do projeto base. */
+  --color-tinta: #33373d;
+  --color-tinta-escura: #1b1d21;
+  --color-noite: #24272c;
+  --color-carmim: #b8282c;
+  --color-carmim-vivo: #cb3438;
+  --color-papel: #f6f6f7;
+  --color-grafite: #1f2226;
+  --color-grafite-suave: #555b64;
+  --color-guilloche: #d9dbdf;
   --color-branco: #ffffff;
 
-  --font-sans: 'Schibsted Grotesk Variable', 'Noto Sans SC', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Heebo Variable', 'Noto Sans SC', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Montserrat Variable', 'Noto Sans SC', ui-sans-serif, system-ui, sans-serif;
 
   --text-xs: 0.875rem;
   --text-sm: 1rem;
@@ -36,7 +38,8 @@
     text-rendering: optimizeLegibility;
   }
   html:lang(zh-CN) {
-    --font-sans: 'Noto Sans SC', 'Schibsted Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+    --font-sans: 'Noto Sans SC', 'Heebo Variable', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Noto Sans SC', 'Montserrat Variable', ui-sans-serif, system-ui, sans-serif;
   }
   body {
     font-size: var(--text-base);
@@ -44,10 +47,11 @@
     min-height: 100svh;
   }
   h1, h2, h3 {
+    font-family: var(--font-display);
     color: var(--color-tinta);
     font-weight: 700;
     line-height: 1.12;
-    letter-spacing: -0.018em;
+    letter-spacing: -0.02em;
     text-wrap: balance;
   }
   p { text-wrap: pretty; }
@@ -84,7 +88,7 @@
   }
   .btn-primary { background: var(--color-carmim); color: var(--color-branco); }
   .guilloche-noite .btn-primary, .bg-noite .btn-primary { background: var(--color-carmim-vivo); }
-  .guilloche-noite .btn-primary:hover, .bg-noite .btn-primary:hover { background: #cf1a4d; }
+  .guilloche-noite .btn-primary:hover, .bg-noite .btn-primary:hover { background: #dd4448; }
   .btn-primary:hover { background: var(--color-carmim-vivo); }
   .btn-ghost { color: var(--color-tinta); box-shadow: inset 0 0 0 1.5px var(--color-tinta); }
   .btn-ghost:hover { background: var(--color-tinta); color: var(--color-branco); }
@@ -113,7 +117,7 @@
   /* Borda picotada de selo postal (máscara SVG em onda) na base de uma seção. */
   .guilloche-noite {
     background-color: var(--color-noite);
-    background-image: url('/guilloche-claro.svg'), radial-gradient(120% 90% at 85% 40%, #1a1a7a 0%, transparent 60%);
+    background-image: url('/guilloche-claro.svg'), radial-gradient(120% 90% at 85% 40%, rgb(203 52 56 / 0.22) 0%, transparent 60%);
     background-size: 520px auto, 100% 100%;
     color: var(--color-branco);
   }
@@ -128,9 +132,7 @@
 
   /* Carimbo de fonte oficial. */
   .source-stamp {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
+    display: block;
     font-size: var(--text-xs);
     color: var(--color-grafite-suave);
   }
@@ -152,7 +154,7 @@
     -webkit-mask: url('/check.svg') center / contain no-repeat;
     mask: url('/check.svg') center / contain no-repeat;
   }
-  .check-light li::before { background: #ff5c85; }
+  .check-light li::before { background: #ff7a7d; }
   .x-list li {
     position: relative;
     padding-left: 2rem;

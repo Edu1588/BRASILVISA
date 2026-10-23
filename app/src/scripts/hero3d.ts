@@ -161,7 +161,7 @@ export async function mountHero3D() {
   scene.add(key);
 
   // Posições e rotações iguais às da ilustração SVG (centros calculados a partir dos transforms).
-  const passport = makePiece(passTex, 230, 320, 16, 4, 0x2b2a8a, 0.12);
+  const passport = makePiece(passTex, 230, 320, 16, 4, 0x33373d, 0.12);
   const card = makePiece(cardTex, 520, 320, 22, 3, 0xdfe2f0, 0.16);
   const pieces: Piece[] = [
     { mesh: passport.group, holo: passport.holo, base: toWorld(483.6, 182.4).setZ(-40), rotZ: THREE.MathUtils.degToRad(-8), depthFactor: 0.55 },

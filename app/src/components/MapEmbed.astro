@@ -11,8 +11,7 @@ const hl = { pt: 'pt-BR', en: 'en', zh: 'zh-CN' }[lang];
   <div class="wrap grid gap-8 md:grid-cols-[1fr_1.6fr] md:items-center">
     <div>
       <h2 class="text-[clamp(1.6rem,2.6vw,2.1rem)]">{t.home.where.title}</h2>
-      <address class="mt-4 not-italic text-grafite-suave">{t.footer.address}</address>
-      {t.footer.hours && <p class="mt-2 text-grafite-suave">{t.footer.hoursLabel}: {t.footer.hours}</p>}
+      <address class="mt-4 not-italic text-grafite-suave">{t.footer.hq}<br />{t.footer.branch}</address>
       <a href={`https://www.google.com/maps/dir/?api=1&destination=${q}`} target="_blank" rel="noopener" class="btn btn-ghost mt-6">
         {t.home.where.route}
       </a>

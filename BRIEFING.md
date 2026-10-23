@@ -1,39 +1,40 @@
-# BRIEFING: Migrafácil
+# BRIEFING: Landing pages BrasilVisa
 
-## O que já se sabe (lido do site atual)
-- Empresa: Migrafácil, consultoria privada de imigração, independente de órgãos do governo.
-- Página a refazer: assessoria em CRNM (antigo RNE): registro, renovação e regularização.
-- Promessa atual: "CRNM sem dor de cabeça"; estruturar o processo, evitar retrabalho e acompanhar até a emissão, conforme a base legal de residência.
-- Serviços citados: renovação de RNE/RNM, vistos de trabalho, vistos de investimento, suporte completo no processo de residência.
-- Título do domínio fala em consultoria de visto americano (DS-160, entrevista, agendamento), mas a home é o post padrão do WordPress.
-- Canal único de conversão: WhatsApp +55 11 96395-9030 (DDD 11, São Paulo).
-- FAQ atual: 5 perguntas, só a primeira respondida.
-- Aviso legal: orientam processo e documentação; decisões e emissões são exclusivas das autoridades.
-- Problemas do site atual: contadores em "+0", hero sem imagem visível no carregamento, FAQ incompleto, home vazia, sem prova social, sem equipe, sem endereço.
+Fonte: reunião de alinhamento "Brasilvisa - Marketing Digital" (03/09/2026) + site atual brasillvisa.com.br + respostas do Edu em 23/10/2026.
+As páginas da Migrafácil (migrafacil.net) foram só referência de estrutura; o site construído para elas (migrafacil-site/) serve de base técnica.
 
-## Outras páginas do site atual (lidas via sitemap)
-- /assessoria-em-visto/: visto americano. DS-160 assistido, checklist de documentos, simulação de entrevista, orientação de taxas e agendamento. Contadores: turismo, K1 noiva, waiver (todos "+0"). Seção de depoimentos vazia. Aviso: sem afiliação com Embaixada/Consulados, sem garantia de visto.
-- /naturalizacao-brasileira-consultoria/: naturalização (ordinária, extraordinária, provisória, definitiva). Passos: diagnóstico, estratégia documental (traduções juramentadas, apostilamento), dossiê, protocolo, acompanhamento. FAQ cita prazo de 12 a 24 meses ou mais.
-- /rne-brasil/: institucional de OUTRA marca, "RNE Brasil", com o mesmo WhatsApp. Serviços: CRNM, naturalização, passaportes, vistos, CPF e CTPS, autorização de residência. CEO David Cristofhor de Lima (experiência na Polícia Federal, certificados). Endereço: Alameda dos Professores, 90, Parque Villa Flores, Sumaré SP, 13175-670. E-mail contato@rnebrasil.com. Redes: Instagram @rne_brasil, Facebook, LinkedIn, YouTube. Atendimento presencial e online.
+## Empresa
+- BRASILVISA ASSESSORIA EMPRESARIAL LTDA, CNPJ 38.076.921/0001-00. Marca BrasilVisa (domínio atual brasillvisa.com.br).
+- Sócia-fundadora: Dra. Clariane Alcantara; o site diz "nossos advogados e a sócia-fundadora atuam há mais de 9 anos em Direito Internacional e Migratório".
+- Matriz: Av. Marquês de São Vicente, 230, Cj 1619, Barra Funda, São Paulo SP, 01139-000.
+- Filial: Rua Hugo D'Antola, 146, Piso Superior, Sala B, Água Branca, São Paulo SP (em frente à Polícia Federal).
+- Contato único decidido: WhatsApp (11) 94973-6011 e contato@brasillvisa.com.br.
+- Redes: instagram.com/brasillvisa, facebook.com/Brasillvisa.
+- Depoimentos públicos no site atual: Rafaela (Salvador/BA), Luiz (Campinas), Tiago (Curitiba/PR).
 
-## Respostas do FAQ CRNM no site atual
-1. CRNM é o novo nome; RNE era a nomenclatura antiga.
-2. Consultoria e orientação; o protocolo é feito pelo solicitante nos canais oficiais.
-3. Prazo varia por base legal, localidade e demanda do órgão.
-4. Advogado muitas vezes não é obrigatório; indicam parceiros.
-5. Indeferimento: resposta errada no site (repete a 4). Precisa de resposta nova.
+## Identidade visual
+- Logo: caixa vermelha com "BRASIL" em branco + "VISA" em cinza escuro (ref/logo-dark.svg e ref/logo-light.svg).
+- Cores do site atual: vermelho #CB3438, cinza escuro #33373D, preto, branco; cinza médio #69727D.
+- Fontes do site atual: Heebo e Montserrat.
 
-## Decisões confirmadas (Fase 1)
-- Escopo: site completo. Home + páginas de serviço (CRNM, naturalização, vistos de trabalho, vistos de investimento, visto americano) + 404, Obrigado, Privacidade, Cases, FAQ.
-- Públicos: estrangeiros no Brasil (CRNM, naturalização, trabalho, investimento) e brasileiros que querem visto americano.
-- Idiomas: português, inglês e mandarim.
-- Marca: mantém logo e cores atuais; refaz layout e tipografia.
-- Atendimento: online para todo o Brasil e exterior + presencial em Sumaré SP (Alameda dos Professores, 90, Parque Villa Flores, 13175-670). Site leva mapa, rota e schema local.
-- Migrafácil e RNE Brasil são a mesma empresa: equipe (CEO David Cristofhor de Lima), certificados, redes sociais e e-mail da RNE Brasil valem para o site.
-- Promessa de resposta: retorno em até 24 horas.
-- Mandarim: chinês simplificado (zh-CN), público da China continental.
-- Extra da Fase 6: elemento 3D.
-- Conversão: WhatsApp +55 11 96395-9030, mensagem pré-preenchida por serviço.
+## Formato
+Landing pages de anúncio, uma por serviço, foco em WhatsApp, em português, inglês e chinês simplificado. Preparadas para um domínio internacional (.com) a definir.
 
-## Em aberto
-- Nada. Entendimento confirmado pelo usuário em 23/10/2026.
+## Páginas
+1. /visto-de-investidor: serviço principal. Investimento mínimo de R$ 500.000 integralizado em empresa brasileira. Escopo ampliado: abertura de empresa, procuração pública, conta bancária, câmbio e registro no Banco Central. Prazo estimado pela equipe: 30 a 90 dias. Para quem está no exterior e para quem já está no Brasil.
+2. /visto-de-investimento-imobiliario: suporte no câmbio e análise de contratos; capital entra direto na conta do vendedor.
+3. /visto-de-reuniao-familiar: foco no público que já mora no Brasil e quer trazer a família.
+4. /regularizacao-chineses: página do mercado chinês, conteúdo nativo; três pilares: visto de negócios (só autoridade e SEO, sem venda ativa por causa da isenção vigente), visto de investimento, reunião familiar. Cautela: nada de promessa sobre residência de quem entrou pela isenção.
+5. /assessoria-em-rne: registro e renovação de CRNM (antigo RNE).
+6. /naturalizacao-brasileira
+7. /assessoria-em-visto: visto americano.
+8. /quem-somos: institucional (equivalente à página /rne-brasil da Migrafácil).
+Mais: 404, Obrigado, Política de Privacidade.
+
+## Decisões da reunião que afetam o site
+- Anúncios em domínio internacional (.com); conteúdo de autoridade, sem nome de órgão público usado de forma que pareça oficial (motivo dos bloqueios em Google e Meta).
+- Segmentação de nacionalidades é configuração de anúncio, não texto do site: o site não menciona nacionalidades atendidas ou recusadas.
+- Canal único de WhatsApp e e-mail.
+
+## Regras do pipeline mantidas
+FAQ de exatamente 5 perguntas por página, sem travessões, nada inventado (depoimentos, números, fotos, cases marcados como pendentes), CTA fixo no mobile, breadcrumbs, 404, Obrigado, Privacidade.

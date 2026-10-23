@@ -10,7 +10,7 @@ for (let k = 0; k < 14; k++) {
   }
   lines.push(pts.join(' '));
 }
-const mrz1 = 'RNM<BRA<<MIGRAFACIL<<<<<<<<<<<<<<<<';
+const mrz1 = 'RNM<BRA<<BRASILVISA<<<<<<<<<<<<<<<';
 const mrz2 = '0000000<0BRA0000000<<<<<<<<<<<<<<<0';
 ---
 
@@ -18,9 +18,9 @@ const mrz2 = '0000000<0BRA0000000<<<<<<<<<<<<<<<0';
 <svg viewBox="0 0 640 470" class="hero-doc h-auto w-full max-w-[620px] overflow-visible" role="img" aria-hidden="true">
   <defs>
     <linearGradient id="hd-check" x1="0" y1="1" x2="1" y2="0">
-      <stop offset="0" stop-color="#b5103f" />
-      <stop offset="0.55" stop-color="#930c39" />
-      <stop offset="1" stop-color="#9c9af0" />
+      <stop offset="0" stop-color="#e0474b" />
+      <stop offset="0.55" stop-color="#cb3438" />
+      <stop offset="1" stop-color="#ffffff" />
     </linearGradient>
     <filter id="hd-shadow" x="-10%" y="-10%" width="120%" height="130%">
       <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000018" flood-opacity=".45" />
@@ -30,7 +30,7 @@ const mrz2 = '0000000<0BRA0000000<<<<<<<<<<<<<<<0';
 
   <!-- Passaporte ao fundo -->
   <g class="hd-passport" transform="translate(392 8) rotate(8)" filter="url(#hd-shadow)">
-    <rect width="230" height="320" rx="16" fill="#2b2a8a" stroke="#ffffff" stroke-opacity=".25" />
+    <rect width="230" height="320" rx="16" fill="#33373d" stroke="#ffffff" stroke-opacity=".25" />
     <rect x="14" y="14" width="202" height="292" rx="10" fill="none" stroke="#ffffff" stroke-opacity=".18" />
     <circle cx="115" cy="130" r="44" fill="none" stroke="#c8cbe4" stroke-opacity=".55" stroke-width="2" />
     <path d="M71 130h88M115 86c-18 22-18 66 0 88M115 86c18 22 18 66 0 88" fill="none" stroke="#c8cbe4" stroke-opacity=".55" stroke-width="2" />
@@ -42,13 +42,13 @@ const mrz2 = '0000000<0BRA0000000<<<<<<<<<<<<<<<0';
   <g class="hd-card" transform="translate(10 120) rotate(-3)" filter="url(#hd-shadow)">
     <rect width="520" height="320" rx="22" fill="#ffffff" stroke="#c8cbe4" />
     <g clip-path="url(#hd-card)">
-      <g fill="none" stroke="#242374" stroke-opacity=".07">
+      <g fill="none" stroke="#33373d" stroke-opacity=".07">
         {lines.map((p) => <polyline points={p} />)}
       </g>
-      <rect width="520" height="58" fill="#242374" />
+      <rect width="520" height="58" fill="#33373d" />
       <rect x="28" y="22" width="150" height="10" rx="5" fill="#ffffff" fill-opacity=".85" />
       <rect x="28" y="38" width="96" height="6" rx="3" fill="#ffffff" fill-opacity=".45" />
-      <rect x="420" y="18" width="72" height="22" rx="11" fill="#930c39" />
+      <rect x="420" y="18" width="72" height="22" rx="11" fill="#cb3438" />
     </g>
     <rect x="28" y="84" width="118" height="146" rx="10" fill="#e9ebf5" />
     <circle cx="87" cy="138" r="26" fill="#c8cbe4" />

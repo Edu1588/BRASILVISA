@@ -1,11 +1,10 @@
 ---
 import WaIcon from '../components/WaIcon.astro';
 import Base from '../layouts/Base.astro';
-import { DICTS, LANGS, href, waLink, type PageKey } from '../i18n';
+import { DICTS, LANGS, SERVICES, href, waLink } from '../i18n';
 
 // Página única para os três idiomas: o texto principal em português e os atalhos em cada idioma.
 const t = DICTS.pt;
-const links: PageKey[] = ['crnm', 'naturalizacao', 'residencia', 'vistoAmericano', 'home'];
 ---
 
 <Base lang="pt" page="404" title={t.notFound.meta.title} description={t.notFound.meta.description} noindex>
@@ -15,7 +14,8 @@ const links: PageKey[] = ['crnm', 'naturalizacao', 'residencia', 'vistoAmericano
       <h1 class="mt-4 text-[clamp(2rem,4vw,3.2rem)]">{t.notFound.title}</h1>
       <p class="mt-4 text-lg text-grafite-suave">{t.notFound.text}</p>
       <ul class="mt-8 flex flex-wrap gap-3">
-        {links.map((p) => <li><a href={href('pt', p)} class="btn btn-ghost">{t.nav[p]}</a></li>)}
+        <li><a href={href('pt', 'home')} class="btn btn-ghost">{t.nav.home}</a></li>
+        {SERVICES.map((s) => <li><a href={href('pt', s)} class="btn btn-ghost">{t.services[s].label}</a></li>)}
       </ul>
       <a href={waLink('pt', 'geral')} target="_blank" rel="noopener" class="btn btn-wa mt-8"><WaIcon />{t.common.talk}</a>
       <div class="mt-14 grid gap-6 border-t border-guilloche pt-8 sm:grid-cols-2">

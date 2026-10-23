@@ -20,22 +20,23 @@ DIST = APP / 'dist'
 OUT = APP / 'public' / 'og'
 
 PAGES = {
-    'home': '', 'crnm': 'crnm', 'naturalizacao': 'naturalizacao', 'residencia': 'residencia',
-    'vistoAmericano': 'visto-americano', 'sobre': 'sobre', 'cases': 'cases', 'perguntas': 'perguntas',
-    'contato': 'contato', 'privacidade': 'privacidade',
+    'home': '', 'quemSomos': 'quem-somos', 'privacidade': 'privacidade',
+    'investidor': 'visto-de-investidor', 'imobiliario': 'visto-de-investimento-imobiliario',
+    'reuniao': 'visto-de-reuniao-familiar', 'chineses': 'regularizacao-chineses', 'crnm': 'assessoria-em-rne',
+    'naturalizacao': 'naturalizacao-brasileira', 'vistoEua': 'assessoria-em-visto',
 }
 TAGLINE = {
-    'pt': 'Consultoria em imigração · Sumaré SP e online',
-    'en': 'Immigration consulting · Sumaré SP and online',
-    'zh': '移民咨询 · 圣保罗州 Sumaré 及线上',
+    'pt': 'Consultoria em imigração · São Paulo',
+    'en': 'Immigration consulting · São Paulo, Brazil',
+    'zh': '巴西移民咨询 · 圣保罗',
 }
-NOITE = (3, 3, 74)
-CARMIM = (225, 32, 79)
+NOITE = (36, 39, 44)
+CARMIM = (203, 52, 56)
 W, H = 1200, 630
 
 
 def latin_font(size: int) -> ImageFont.FreeTypeFont:
-    src = APP / 'node_modules/@fontsource-variable/schibsted-grotesk/files/schibsted-grotesk-latin-wght-normal.woff2'
+    src = APP / 'node_modules/@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2'
     f = TTFont(src)
     f.flavor = None
     bold = instancer.instantiateVariableFont(f, {'wght': 700})
@@ -57,7 +58,7 @@ def background() -> Image.Image:
     gd = ImageDraw.Draw(glow)
     for r in range(520, 0, -8):
         gd.ellipse((900 - r, 300 - r, 900 + r, 300 + r), fill=int(70 * (1 - r / 520)))
-    img.paste((40, 40, 150), mask=glow)
+    img.paste((120, 40, 44), mask=glow)
     # Linhas de guilhoché.
     for k in range(14):
         pts = []
@@ -119,7 +120,7 @@ def main() -> int:
         print('Rode npm run build em app/ antes.', file=sys.stderr)
         return 1
     logo = Image.open(APP / 'public/logo-escuro.webp').convert('RGBA')
-    logo.thumbnail((240, 110))
+    logo.thumbnail((300, 70))
     fonts = {'latin': latin_font, 'zh': zh_font}
     count = 0
     for lang in ('pt', 'en', 'zh'):

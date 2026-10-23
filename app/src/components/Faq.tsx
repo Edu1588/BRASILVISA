@@ -53,7 +53,7 @@ export default function Faq({ items, sourceLabel, headingLevel = 3 }: Props) {
                   <p>{item.a}</p>
                   {item.src && (
                     <p className="source-stamp mt-3">
-                      <span>{sourceLabel}:</span>
+                      {sourceLabel}:{" "}
                       <a href={item.src} target="_blank" rel="noopener">
                         {item.srcLabel}
                       </a>

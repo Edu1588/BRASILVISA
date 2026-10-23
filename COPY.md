@@ -1,398 +1,339 @@
-# COPY: Site Migrafácil (Fase 3)
+# COPY: Landing pages BrasilVisa (Fase 3)
 
-Versão em português, base para as traduções em inglês e chinês simplificado (feitas na Fase 5 a partir desta versão aprovada).
+Versão em português, base para as traduções em inglês e chinês simplificado (feitas na construção a partir desta versão aprovada).
 
 Convenções:
-- `[PREENCHER: ...]` marca o que o cliente precisa fornecer. Nada foi inventado.
-- `[WA: serviço]` é o botão de WhatsApp (+55 11 96395-9030) com mensagem pronta daquele serviço. Mensagens no fim do arquivo.
-- Promessa padrão de resposta: **retorno em até 24 horas**.
-- Taxas e prazos oficiais sempre com link para a fonte e a data de conferência.
+- `[PREENCHER: ...]` marca o que o cliente precisa confirmar ou fornecer. Nada foi inventado.
+- `[WA: serviço]` é o botão de WhatsApp (+55 11 94973-6011) com mensagem pronta daquele serviço. Mensagens no fim do arquivo.
+- Promessa de resposta: **retorno em até 24 horas** (mantida do projeto anterior). [PREENCHER: confirmar se a BrasilVisa assume esse prazo]
+- Fatos oficiais sempre com link e data de conferência (23/10/2026). Fontes completas em PESQUISA.md.
+- Regras de compliance aplicadas (PESQUISA.md, seção 6): sem promessa de resultado, sem superlativos, sem "advogados" como produto, sem imitar órgãos públicos, sem desconto como chamariz, sem pedir documentos no formulário.
 
 ---
 
-## Elementos globais
+## Elementos globais (todas as landing pages)
 
-**Menu:** Início · CRNM · Naturalização · Residência · Visto americano · Sobre · Cases · Perguntas · Contato
-**Seletor de idioma:** PT · EN · 中文
-**Botão do menu:** Falar no WhatsApp
+**Cabeçalho enxuto (landing de anúncio):** logo BrasilVisa · seletor PT · EN · 中文 · botão "Falar no WhatsApp"
+**CTA fixo no mobile:** Falar com especialista · Retorno em até 24h
+**Botão fixo no desktop:** WhatsApp no canto inferior direito.
 
-**CTA fixo no mobile (barra inferior):**
-Falar com especialista · Retorno em até 24h
-
-**Faixa de confiança (abaixo do herói em todas as páginas de serviço):**
-Atendimento em português, inglês e chinês · Online para todo o Brasil · Presencial em Sumaré SP · Retorno em até 24 horas
+**Faixa de confiança:**
+Atendimento em português, inglês e chinês · Escritório em São Paulo, em frente à Polícia Federal da Água Branca · Retorno em até 24 horas
 
 **Rodapé:**
-Migrafácil, consultoria em imigração e documentação. Mesma equipe da RNE Brasil.
-Alameda dos Professores, 90, Parque Villa Flores, Sumaré SP, 13175-670
-WhatsApp (11) 96395-9030 · contato@rnebrasil.com
-Atendimento presencial: [PREENCHER: dias e horários]
-Instagram · Facebook · LinkedIn · YouTube
-Links: Política de Privacidade · Perguntas frequentes · Cases de sucesso
+BrasilVisa Assessoria Empresarial Ltda · CNPJ 38.076.921/0001-00
+Matriz: Av. Marquês de São Vicente, 230, Cj 1619, Barra Funda, São Paulo SP, 01139-000
+Filial: Rua Hugo D'Antola, 146, Piso Superior, Sala B, Água Branca, São Paulo SP
+WhatsApp (11) 94973-6011 · contato@brasillvisa.com.br · Instagram · Facebook
+Links: Quem somos · todos os serviços · Política de Privacidade
 
 **Aviso legal (rodapé de todas as páginas):**
-A Migrafácil é uma consultoria privada. Não temos vínculo com a Polícia Federal, o Ministério da Justiça, a Embaixada ou os consulados dos Estados Unidos. Decisões e emissões de documentos e vistos cabem exclusivamente às autoridades competentes, e nenhum resultado é garantido. Taxas oficiais (GRU da Polícia Federal, taxa consular MRV) são pagas diretamente ao governo e não fazem parte dos nossos honorários. Os formulários oficiais são gratuitos no gov.br. Quando o caso exige advogado, indicamos parceiros inscritos na OAB.
+A BrasilVisa é uma empresa privada de consultoria em imigração. Não temos vínculo com a Polícia Federal, o Ministério da Justiça e Segurança Pública, o Itamaraty, o Banco Central, a Embaixada ou os consulados dos Estados Unidos. Decisões sobre vistos, autorizações de residência e naturalização cabem exclusivamente às autoridades, e nenhum resultado é garantido. Taxas oficiais são pagas diretamente ao governo e não fazem parte dos nossos honorários.
 
 ---
 
-## 1. Início (Home)
+## 0. Página inicial (hub das landing pages)
 
-**Herói**
-Sobretítulo: Consultoria em imigração · Sumaré SP e online
-Título: **Seus documentos de imigração, em ordem e sem retrabalho.**
-Subtítulo: Orientamos estrangeiros que vivem no Brasil (CRNM, residência e naturalização) e brasileiros que querem o visto americano. Cada etapa revisada antes de chegar à Polícia Federal ou ao consulado.
-CTA principal: [WA: geral] Falar com especialista
-CTA secundário: Ver serviços
-Apoio abaixo do botão: Retorno em até 24 horas, em português, inglês ou chinês.
+Título: **Imigração para o Brasil com quem acompanha cada etapa.**
+Subtítulo: Consultoria para investidores, famílias e estrangeiros que já vivem no Brasil. Escritório em São Paulo e atendimento em português, inglês e chinês.
+CTA: [WA: geral] Falar com especialista
 
-**Escolha seu caminho (dois blocos lado a lado)**
-
-Bloco 1: **Moro no Brasil e sou estrangeiro**
-Registro e renovação de CRNM, autorização de residência por trabalho ou investimento e naturalização brasileira.
-Link: Ver serviços para estrangeiros
-
-Bloco 2: **Sou brasileiro e quero ir aos Estados Unidos**
-DS-160 revisado, documentos organizados e treino para a entrevista no consulado.
-Link: Ver assessoria de visto americano
-
-**Serviços (cards)**
-- **CRNM (antigo RNE).** Registro, renovação e regularização da carteira de estrangeiro, conforme a sua base legal de residência.
-- **Autorização de residência.** Trabalho, investimento e outras bases legais, com o dossiê montado para o MigranteWeb e a PF.
-- **Naturalização brasileira.** Diagnóstico da modalidade certa, dossiê completo e acompanhamento até a decisão.
-- **Visto americano.** DS-160, checklist de documentos, orientação de taxa e agendamento e simulação de entrevista.
-
-**Por que a Migrafácil**
-Título: **Quem conhece o processo por dentro erra menos.**
-1. **Experiência prática na Polícia Federal.** Nosso fundador, David Cristofhor de Lima, construiu a carreira com experiência prática na Polícia Federal. [PREENCHER: confirmar a descrição exata do cargo ou atuação, sem sugerir vínculo atual]
-2. **Três idiomas de verdade.** Atendemos em português, inglês e chinês. Pelo que pesquisamos, somos a única consultoria de CRNM e naturalização no Brasil com atendimento em chinês.
-3. **Taxas às claras.** Mostramos o que é taxa do governo e o que é honorário, com o link oficial de cada valor.
-4. **Presencial e online.** Escritório em Sumaré e atendimento remoto para todo o Brasil e o exterior.
-
-**Como funciona (4 passos)**
-1. **Conversa inicial.** Você conta seu caso no WhatsApp. Retornamos em até 24 horas.
-2. **Diagnóstico.** Identificamos a base legal ou a categoria de visto certa e o que falta.
-3. **Dossiê.** Checklist, revisão de formulários, traduções e apostilamentos no padrão exigido.
-4. **Acompanhamento.** Orientamos o protocolo e o agendamento e seguimos com você até a decisão.
-
-**Números** (só entram com dado real; se não houver, a seção sai do ar)
-[PREENCHER: número real de CRNM renovadas ou regularizadas]
-[PREENCHER: número real de vistos americanos orientados]
-[PREENCHER: anos de atuação]
-
-**Avaliações**
-Título: **O que dizem nossos clientes**
-[PREENCHER: 3 a 6 avaliações reais do Google, com nome e autorização]
-Link: Ver todas as avaliações no Google [PREENCHER: link do perfil no Google]
-
-**Cases (chamada)**
-Título: **Casos reais, explicados do começo ao fim.**
-Texto: Veja como organizamos processos de CRNM, naturalização e visto americano.
-Link: Ver cases de sucesso
-
-**Perguntas frequentes** (as 5 da seção 9, em acordeão)
-
-**CTA final**
-Título: **Conte seu caso. Respondemos em até 24 horas.**
-Texto: Sem compromisso. Você sai da conversa sabendo qual é o seu próximo passo.
-Botão: [WA: geral] Falar com especialista
-
-**Onde estamos**
-Mapa do endereço de Sumaré + botão "Como chegar" (abre rota no Google Maps).
+Cards de serviço (ordem de prioridade):
+1. **Visto de investidor.** Residência no Brasil investindo a partir de R$ 500 mil em empresa brasileira.
+2. **Investimento imobiliário.** Residência pela compra de imóvel a partir de R$ 1 milhão (R$ 700 mil no Norte e Nordeste).
+3. **Reunião familiar.** Traga cônjuge, filhos e pais para morar com você no Brasil.
+4. **Cidadãos chineses.** Visto de negócios, investimento e reunião familiar, com atendimento em chinês.
+5. **CRNM (antigo RNE).** Registro, renovação e regularização da carteira de estrangeiro.
+6. **Naturalização brasileira.** Diagnóstico da modalidade e dossiê completo.
+7. **Visto americano.** DS-160 revisado e preparação para a entrevista.
 
 ---
 
-## 2. CRNM (antigo RNE)
+## 1. /visto-de-investidor (serviço principal)
 
-Breadcrumb: Início › CRNM
+Breadcrumb: Início › Visto de investidor
 
 **Herói**
-Título: **CRNM sem dor de cabeça: registro, renovação e regularização.**
-Subtítulo: Montamos seu processo conforme a sua base legal de residência, evitamos retrabalho e acompanhamos cada etapa até a carteira na sua mão.
-CTA: [WA: CRNM] Falar com especialista
+Título: **Residência no Brasil como investidor, do câmbio à carteira de estrangeiro.**
+Subtítulo: Para quem quer investir a partir de R$ 500 mil em uma empresa brasileira e viver no país. Cuidamos da abertura da empresa, da entrada do capital e do pedido de residência, para quem está no exterior ou já está no Brasil.
+CTA: [WA: investidor] Falar com especialista
 Apoio: Retorno em até 24 horas.
 
-**O que é a CRNM**
-A Carteira de Registro Nacional Migratório é o documento de identidade do estrangeiro que mora no Brasil. Ela substituiu o antigo RNE com a Lei de Migração (Lei 13.445/2017) e é emitida pela Polícia Federal. [Fonte: Decreto 9.199/2017]
+**O que a regra exige** (RN CNIg 13/2017, alterada pela RN 49/2024; conferido em 23/10/2026)
+- Investimento mínimo de **R$ 500 mil** em moeda estrangeira, em empresa nova ou já existente.
+- A partir de **R$ 150 mil** quando o investimento é em inovação, pesquisa, ciência ou tecnologia, em empresa ligada a incubadora, parque tecnológico, aceleradora ou programa público de inovação.
+- **Plano de investimento ou de negócios** para 3 anos, com geração de emprego ou renda.
+- Capital estrangeiro integralizado no contrato social e comprovado pelo contrato de câmbio.
+Fonte: Ministério da Justiça e Segurança Pública.
 
-**Para quem é**
-- Quem chegou com visto temporário e precisa se registrar.
-- Quem teve a autorização de residência aprovada e precisa emitir a carteira.
-- Quem está com a carteira perto de vencer, vencida ou com dados desatualizados.
-- Quem perdeu ou teve a carteira roubada.
+**Como acompanhamos você (passo a passo)**
+1. **Diagnóstico.** Avaliamos seu perfil, o valor e o tipo de negócio, e se o pedido sai do exterior ou do Brasil.
+2. **CPF e representante no Brasil.** Orientamos o CPF de estrangeiro e a procuração para quem vai representar você no país.
+3. **Abertura da empresa.** Contrato social, registro na Junta Comercial e CNPJ, com o capital estrangeiro previsto.
+4. **Câmbio e Banco Central.** Orientamos a remessa pelo câmbio formal e a declaração do investimento estrangeiro direto no sistema do Banco Central (SCE-IED), obrigatória a partir de US$ 100 mil.
+5. **Conta bancária e plano de negócios.** Apoio na abertura da conta da empresa e na montagem do plano exigido pela norma.
+6. **Pedido de residência.** Protocolo no MigranteWeb, acompanhamento e, após o deferimento, registro na Polícia Federal para emitir a CRNM.
 
-**Prazos que você precisa conhecer** (com fonte e data de conferência)
-- Visto temporário: registro em até **90 dias** após a entrada no Brasil. [Decreto 9.199, art. 64]
-- Residência aprovada no Brasil: registro em até **30 dias** da publicação. [Decreto 9.199, art. 66]
-- Renovação: pode começar até **90 dias antes** do vencimento, com atendimento presencial na PF. [PF, Dúvidas frequentes]
-- Protocolo do pedido: garante os mesmos direitos por até **180 dias**. [PF, Dúvidas frequentes]
-- Residência temporária vencida gera multa por dia de atraso. [PF, Dúvidas frequentes]
+**Prazos**
+- Prazo oficial estimado de análise do pedido: até 30 dias, ou até 60 dias se houver exigência (gov.br, conferido em 23/10/2026).
+- Para todo o processo, da empresa à residência, nossa equipe estima de 30 a 90 dias, conforme o caso. É uma estimativa, não uma garantia.
 
-**Taxas oficiais da Polícia Federal** (conferido em 23/10/2026)
+**Do exterior ou já no Brasil**
+- **No exterior:** pedido de autorização prévia e, depois, visto de investidor no consulado brasileiro do seu país.
+- **Já no Brasil:** o pedido pode ser feito daqui, sem precisar sair do país.
+
+**Taxas oficiais** (pagas ao governo)
 | Taxa | Valor |
 |---|---|
 | Pedido de autorização de residência | R$ 168,13 |
 | Emissão da CRNM | R$ 204,77 |
-| Agendamento e retirada | Gratuito |
-Fonte: gov.br. Essas taxas são pagas por GRU diretamente ao governo. Nosso honorário é à parte e informado no diagnóstico.
+Nosso honorário é à parte e informado no diagnóstico.
 
-**O que fazemos**
-- Identificamos a base legal certa para o seu pedido.
-- Montamos o checklist de documentos do seu perfil.
-- Revisamos formulários e dados antes do envio.
-- Orientamos a emissão da GRU e o agendamento na PF.
-- Preparamos você para o atendimento presencial.
-- Acompanhamos o pedido no SISMIGRA até a retirada.
+**Por quanto tempo vale:** a residência é por prazo indeterminado, condicionada à execução do plano de investimento. Para manter, a empresa comprova o que foi feito (declarações, empregados, recolhimentos).
 
-**Erros que evitamos**
-- Pedido feito na base legal errada.
-- Documento vencido ou sem tradução juramentada e apostilamento.
-- Perder o prazo de 90 dias e acumular multa.
-- Comparecer à PF sem um documento e precisar remarcar.
+**FAQ (5)**
+1. **Qual o valor mínimo para o visto de investidor?** R$ 500 mil em moeda estrangeira. Em projetos de inovação, ciência ou tecnologia, a partir de R$ 150 mil, se a empresa cumprir os requisitos da norma.
+2. **Posso fazer o pedido estando no Brasil?** Sim. A norma permite o pedido de quem já está no país. Quem está fora pede a autorização e depois o visto no consulado.
+3. **A residência é permanente?** É por prazo indeterminado, mas depende de comprovar a execução do plano de investimento. Ajudamos a organizar essa comprovação.
+4. **Preciso mesmo de plano de negócios?** Sim, é obrigatório. Ele cobre 3 anos e mostra o negócio, os empregos ou a renda gerados e como o valor será aplicado.
+5. **Como o dinheiro entra no Brasil?** Por câmbio formal, com finalidade de investimento estrangeiro direto, declarado no sistema do Banco Central quando a remessa é de US$ 100 mil ou mais. Orientamos cada etapa com o banco.
 
 **Bloco de CTA**
-Título: **Sua carteira vence nos próximos meses?**
-Texto: Quanto antes começar, mais datas de agendamento você encontra.
-Botão: [WA: CRNM] Falar com especialista
+Título: **Vamos avaliar o seu investimento.**
+Texto: Conte o valor, o tipo de negócio e onde você está. Respondemos em até 24 horas com o caminho possível.
 
-Aviso da página: Prestamos consultoria e orientação. O protocolo é feito nos canais oficiais e a decisão é da Polícia Federal.
+Aviso da página: A decisão sobre a autorização de residência é do Ministério da Justiça e Segurança Pública. Valores e regras conferidos em 23/10/2026; podem mudar.
 
 ---
 
-## 3. Naturalização brasileira
+## 2. /visto-de-investimento-imobiliario
 
-Breadcrumb: Início › Naturalização
+Breadcrumb: Início › Investimento imobiliário
+
+**Herói**
+Título: **Residência no Brasil pela compra de imóvel, com o câmbio feito do jeito certo.**
+Subtítulo: Para quem quer investir em imóvel urbano no Brasil e morar no país. Apoiamos a análise do contrato, a remessa do capital e o pedido de residência.
+CTA: [WA: imobiliario] Falar com especialista
+
+**O que a regra exige** (RN CNIg 36/2018, alterada pelas RN 46/2021 e 49/2024)
+- Imóvel urbano, pronto ou em construção, de **R$ 1 milhão** ou mais; no **Norte e Nordeste**, **R$ 700 mil**.
+- Pode somar mais de um imóvel para chegar ao mínimo.
+- Recursos próprios vindos do exterior, comprovados por declaração do banco autorizado pelo Banco Central.
+- Financiamento só conta na parte que passar do mínimo.
+
+**Como acompanhamos você**
+1. Análise do imóvel e do contrato antes de assinar (matrícula, ônus, documentação do vendedor ou da incorporadora).
+2. Orientação do câmbio para que a entrada do capital do exterior fique comprovada.
+3. Montagem do pedido de residência com a documentação exigida.
+4. Registro na Polícia Federal e emissão da CRNM.
+
+**Prazos e permanência**
+- Residência inicial de **4 anos**, que pode passar a prazo indeterminado mantendo o imóvel.
+- Presença mínima de **14 dias no Brasil a cada 2 anos**.
+
+**FAQ (5)**
+1. **Quanto preciso investir?** R$ 1 milhão em imóvel urbano, ou R$ 700 mil nos estados do Norte e do Nordeste.
+2. **Posso comprar na planta?** Sim, com promessa de compra e venda registrada, alvará de construção e memorial de incorporação.
+3. **Posso financiar parte do imóvel?** Só a parte que passar do valor mínimo. O mínimo precisa ser pago com recursos vindos do exterior.
+4. **Quantos dias preciso ficar no Brasil?** Pelo menos 14 dias a cada 2 anos, contados do registro na Polícia Federal.
+5. **Quando a residência deixa de ter prazo?** Depois dos 4 anos iniciais, comprovando que manteve o investimento.
+
+**Bloco de CTA:** **Já escolheu o imóvel?** Envie o endereço e o valor. Avaliamos se o investimento se enquadra antes de você assinar.
+
+Aviso da página: A decisão é do Ministério da Justiça e Segurança Pública. Não fazemos intermediação imobiliária.
+
+---
+
+## 3. /visto-de-reuniao-familiar
+
+Breadcrumb: Início › Reunião familiar
+
+**Herói**
+Título: **Traga sua família para morar com você no Brasil.**
+Subtítulo: Para quem já vive no Brasil, como brasileiro ou estrangeiro com residência, e quer trazer cônjuge, filhos, pais ou irmãos. Organizamos os documentos e acompanhamos o pedido.
+CTA: [WA: reuniao] Falar com especialista
+
+**Quem pode ser chamado** (Lei de Migração, art. 37)
+- Cônjuge ou companheiro, inclusive em união estável, sem discriminação.
+- Filhos.
+- Pais, avós, netos e irmãos de brasileiro ou de imigrante com residência.
+- Quem tem brasileiro sob tutela ou guarda.
+
+**Como acompanhamos você**
+1. Conferimos o vínculo e o tipo de residência de quem chama.
+2. Montamos a lista de documentos: certidões, antecedentes criminais dos últimos 5 anos, prova do vínculo.
+3. Orientamos apostila e tradução juramentada dos documentos estrangeiros.
+4. Protocolo, acompanhamento e emissão da CRNM do familiar.
+
+**Bom saber**
+- O familiar com reunião familiar pode trabalhar no Brasil.
+- A residência do familiar acompanha o prazo de quem chamou.
+- Taxas oficiais: R$ 168,13 (pedido) e R$ 204,77 (CRNM).
+
+**FAQ (5)**
+1. **Quem pode ser chamado por reunião familiar?** Cônjuge ou companheiro, filhos, pais, avós, netos e irmãos, além de quem tem brasileiro sob tutela ou guarda.
+2. **Meu familiar poderá trabalhar?** Sim. A residência por reunião familiar permite trabalhar no Brasil.
+3. **Por quanto tempo a residência vale?** Acompanha a de quem chamou: indeterminada se a sua for indeterminada; com o mesmo vencimento se a sua for temporária.
+4. **Quais documentos são pedidos?** Documento de identidade, certidões de nascimento ou casamento, antecedentes criminais dos últimos 5 anos e prova do vínculo, com apostila e tradução quando estrangeiros.
+5. **União estável vale?** Sim, com comprovação da união.
+
+**Bloco de CTA:** **Quem você quer trazer?** Conte o vínculo e onde a pessoa está. Respondemos em até 24 horas.
+
+Aviso da página: A decisão é da Polícia Federal e do Ministério da Justiça e Segurança Pública.
+
+---
+
+## 4. /regularizacao-chineses (página do mercado chinês; versão principal em chinês)
+
+Breadcrumb: Início › Cidadãos chineses
+
+**Herói**
+Título: **Brasil para cidadãos chineses: visita, investimento e família, com atendimento em chinês.**
+Subtítulo: Explicamos as regras de entrada e de residência e acompanhamos cada etapa em chinês, português ou inglês.
+CTA: [WA: chineses] Falar com especialista
+
+**Três caminhos**
+1. **Visita e negócios.** Desde 11/05/2026, cidadãos chineses com passaporte comum podem visitar o Brasil sem visto por até 30 dias, para turismo ou negócios, sem trabalhar. Vale até 31/12/2026, salvo prorrogação oficial. Para ficar mais tempo, é preciso visto. (Embaixada do Brasil em Pequim)
+2. **Investimento.** Residência como investidor a partir de R$ 500 mil em empresa brasileira, ou pela compra de imóvel a partir de R$ 1 milhão. Ver páginas de investidor e investimento imobiliário.
+3. **Reunião familiar.** Para quem já mora no Brasil e quer trazer a família.
+
+**Já está no Brasil?**
+Algumas modalidades de residência podem ser pedidas daqui, como a de investidor. Cada caso precisa de análise: a entrada sem visto não dá direito a trabalhar nem a ficar além dos 30 dias.
+
+**Documentos da China**
+A China aderiu à Convenção da Apostila em 07/11/2023. Documentos chineses precisam de apostila e de tradução juramentada para o português.
+
+**FAQ (5)**
+1. **Preciso de visto para visitar o Brasil?** Não, para visitas de até 30 dias, até 31/12/2026, salvo prorrogação oficial. Para outras finalidades ou estadias mais longas, é preciso visto.
+2. **Posso trabalhar entrando sem visto?** Não. A isenção não permite trabalho. Para trabalhar ou investir, é preciso a autorização de residência adequada.
+3. **Entrei sem visto. Posso pedir residência estando no Brasil?** Em algumas modalidades, sim, como a de investidor. Avaliamos o seu caso antes de qualquer pedido.
+4. **O que acontece se eu passar dos 30 dias?** A estadia irregular gera multa diária e pode levar à deportação. Por isso o planejamento deve começar antes do vencimento.
+5. **Meus documentos chineses precisam de legalização?** Sim: apostila na China e tradução juramentada no Brasil.
+
+**Bloco de CTA:** **Fale com a gente em chinês.** Retorno em até 24 horas.
+
+Aviso da página: Regras de entrada podem mudar. Conferido em 23/10/2026 na Embaixada do Brasil em Pequim.
+
+---
+
+## 5. /assessoria-em-rne (CRNM, antigo RNE)
+
+Breadcrumb: Início › CRNM (antigo RNE)
+
+**Herói**
+Título: **CRNM sem dor de cabeça: registro, renovação e regularização.**
+Subtítulo: Montamos seu processo conforme a sua base legal de residência e acompanhamos cada etapa até a carteira na sua mão. Escritório em frente à Polícia Federal da Água Branca, em São Paulo.
+CTA: [WA: crnm] Falar com especialista
+
+**Prazos que você precisa conhecer**
+- Visto temporário: registro em até 90 dias após a entrada.
+- Residência aprovada no Brasil: registro em até 30 dias da publicação.
+- Renovação: até 90 dias antes do vencimento, presencial na PF.
+- Protocolo: garante os mesmos direitos por até 180 dias.
+
+**Taxas oficiais:** R$ 168,13 (pedido) e R$ 204,77 (emissão); agendamento e retirada gratuitos.
+
+**O que fazemos:** base legal certa, checklist de documentos, revisão de formulários, orientação de GRU e agendamento, preparação para o atendimento, acompanhamento até a retirada.
+
+**FAQ (5)**
+1. **Minha CRNM vai vencer e não acho vaga na PF. O que faço?** A renovação pode começar 90 dias antes do vencimento e o protocolo garante seus direitos por até 180 dias. Comece cedo.
+2. **Quanto custa?** Taxas oficiais de R$ 168,13 e R$ 204,77, pagas ao governo. Nosso honorário é informado no diagnóstico.
+3. **Tenho mais de 60 anos ou deficiência. Minha carteira vence?** A carteira de residência por prazo indeterminado passa a ter validade indeterminada nesses casos. Verificamos se você se enquadra.
+4. **Carteira vencida dá multa?** Na residência temporária, sim, multa diária. Na permanente, não há multa de renovação.
+5. **Qual o prazo para me registrar depois de chegar?** 90 dias após a entrada com visto temporário, ou 30 dias da publicação se a residência foi aprovada no Brasil.
+
+**Bloco de CTA:** **Sua carteira vence nos próximos meses?** Quanto antes começar, mais datas você encontra.
+
+---
+
+## 6. /naturalizacao-brasileira
+
+Breadcrumb: Início › Naturalização brasileira
 
 **Herói**
 Título: **Naturalização brasileira com o dossiê certo desde o primeiro envio.**
 Subtítulo: Analisamos qual modalidade se aplica a você, organizamos os documentos e acompanhamos o pedido até a decisão.
-CTA: [WA: naturalização] Falar com especialista
-Apoio: Retorno em até 24 horas.
+CTA: [WA: naturalizacao] Falar com especialista
 
-**Modalidades** (fonte: gov.br e Decreto 9.199)
-- **Ordinária.** 4 anos de residência imediatamente anteriores ao pedido, ou 1 ano para quem tem filho ou cônjuge brasileiro. Exige comunicação em português e ausência de condenação penal.
-- **Extraordinária.** Mais de 15 anos ininterruptos de residência no Brasil.
-- **Provisória e conversão em definitiva.** Para quem chegou ao Brasil ainda criança.
+**Modalidades** (Lei de Migração, arts. 65 a 67)
+- **Ordinária:** 4 anos de residência, comunicação em português e sem condenação penal.
+- **Prazo reduzido para 1 ano:** filho, cônjuge ou companheiro brasileiro, entre outras hipóteses da lei.
+- **Extraordinária:** mais de 15 anos ininterruptos no Brasil.
 
-**Como é o processo oficial**
-O pedido é gratuito e feito na plataforma Naturalizar-se, com conta gov.br, e tem uma etapa presencial na PF para conferência de originais e biometria. O prazo oficial estimado é de até 180 dias. Se o pedido for negado, o recurso deve ser feito em 10 dias. [Fonte: gov.br, conferido em 23/10/2026]
+**Como é o processo oficial:** pedido gratuito na plataforma Naturalizar-se, com etapa presencial na PF; prazo estimado de até 180 dias; recurso em 10 dias se negado.
 
-**Como ajudamos**
-1. Diagnóstico de elegibilidade por modalidade.
-2. Estratégia documental: originais, traduções juramentadas e apostilamentos.
-3. Orientação sobre a comprovação de português (Celpe-Bras e outros documentos aceitos).
-4. Montagem e conferência final do dossiê.
-5. Orientação do protocolo na plataforma oficial.
-6. Acompanhamento até a decisão e orientação em caso de recurso.
+**FAQ (5)**
+1. **Quantos anos preciso morar no Brasil?** 4 anos na ordinária; 1 ano com filho, cônjuge ou companheiro brasileiro; mais de 15 anos na extraordinária.
+2. **Preciso provar que falo português?** Sim, com o Celpe-Bras ou outros documentos aceitos pelo Ministério da Justiça.
+3. **Quanto custa e quanto demora?** O pedido oficial é gratuito e tem prazo estimado de até 180 dias. Nosso honorário é informado no diagnóstico.
+4. **E se o pedido for negado?** Cabe recurso em até 10 dias. Orientamos o recurso.
+5. **Vou perder minha nacionalidade de origem?** Depende da lei do seu país. Verificamos o seu caso antes do pedido.
 
-**Erros que evitamos**
-- Escolher a modalidade errada para o seu perfil.
-- Falhas na comprovação de residência e de antecedentes.
-- Traduções e apostilamentos fora do padrão.
-- Perder o prazo de 10 dias para recurso.
-
-**Bloco de CTA**
-Título: **Descubra se você já pode se naturalizar.**
-Botão: [WA: naturalização] Falar com especialista
-
-Aviso da página: Prestamos consultoria. A decisão sobre a naturalização é do Ministério da Justiça. Casos com recurso judicial são encaminhados a advogados parceiros.
+**Bloco de CTA:** **Descubra se você já pode se naturalizar.**
 
 ---
 
-## 4. Autorização de residência (trabalho e investimento)
-
-Breadcrumb: Início › Residência
-
-**Herói**
-Título: **Residência no Brasil por trabalho ou investimento, com o pedido bem montado.**
-Subtítulo: Para profissionais estrangeiros, empresas que contratam e investidores. Organizamos o dossiê para o MigranteWeb e para a Polícia Federal.
-CTA: [WA: residência] Falar com especialista
-Apoio: Retorno em até 24 horas.
-
-**Três frentes**
-- **Trabalho.** Para o profissional contratado por empresa no Brasil e para o RH que conduz a contratação.
-- **Investimento.** Para quem investe em empresa ou imóvel no Brasil. Os valores mínimos seguem a resolução vigente do Conselho Nacional de Imigração e são confirmados no diagnóstico. [PREENCHER: validar valores na resolução CNIg vigente antes de publicar qualquer número]
-- **Outras bases legais.** Reunião familiar, estudo e demais hipóteses previstas na Lei de Migração.
-
-**Como ajudamos**
-1. Enquadramento na base legal correta.
-2. Checklist de documentos para a pessoa e, quando for o caso, para a empresa.
-3. Revisão do pedido no MigranteWeb.
-4. Orientação de taxas, agendamento e registro na PF.
-5. Emissão da CRNM ao final do processo.
-
-**Para empresas**
-Título: **Vai contratar um estrangeiro?**
-Texto: Cuidamos da parte documental para o seu RH se concentrar na contratação. Um ponto de contato só, do pedido à carteira emitida.
-Botão: [WA: empresa] Falar com especialista
-
-Aviso da página: Prestamos consultoria. A decisão sobre a autorização de residência é do Ministério da Justiça e da Polícia Federal.
-
----
-
-## 5. Visto americano
+## 7. /assessoria-em-visto (visto americano)
 
 Breadcrumb: Início › Visto americano
 
 **Herói**
 Título: **Visto americano sem adivinhação: do DS-160 à entrevista.**
-Subtítulo: Não é só preencher formulário. Revisamos seu histórico, organizamos os documentos e treinamos você para a entrevista no consulado.
-CTA: [WA: visto EUA] Falar com especialista
-Apoio: Retorno em até 24 horas.
+Subtítulo: Revisamos seu histórico, organizamos os documentos e preparamos você para a entrevista no consulado.
+CTA: [WA: vistoEua] Falar com especialista
 
-**O que está incluído**
-- Diagnóstico do seu perfil e da categoria de visto certa para a viagem.
-- Preenchimento assistido do DS-160 com validação final dos dados.
-- Checklist de documentos ajustado ao seu perfil.
-- Orientação para pagar a taxa consular e agendar no canal oficial.
-- Simulação de entrevista com feedback.
-- Suporte pelo WhatsApp durante todo o processo.
+**O que está incluído:** diagnóstico do perfil e da categoria de visto; DS-160 com validação final; checklist de documentos; orientação de taxa e agendamento no canal oficial; simulação de entrevista com feedback.
 
-**Erros que evitamos**
-- Dados do DS-160 que não batem com o seu histórico profissional.
-- Vínculos com o Brasil mal apresentados.
-- Respostas vagas ou contraditórias na entrevista.
-- Categoria de visto ou local de atendimento errados.
+**Bom saber:** desde 01/10/2025, quase todos os solicitantes precisam de entrevista presencial, inclusive em muitas renovações.
 
-**Taxa e espera**
-A taxa consular do visto de turismo e negócios (B1/B2) é cobrada pelo governo dos EUA e paga diretamente a ele. [PREENCHER: confirmar valor atual em travel.state.gov antes de publicar; pesquisa indica US$ 185]
-O tempo de espera pela entrevista muda por cidade. Consulte o prazo atualizado na página oficial do Departamento de Estado. [link: travel.state.gov, Global Visa Wait Times]
+**FAQ (5)**
+1. **Vocês garantem o visto?** Não. A decisão é exclusiva do consulado. Reduzimos os erros que mais levam à negativa.
+2. **Quanto custa a taxa consular?** A taxa do visto de turismo e negócios é cobrada pelo governo dos EUA. [PREENCHER: confirmar valor atual em travel.state.gov; pesquisa indica US$ 185]
+3. **Preciso de entrevista para renovar?** Em regra, sim, desde 01/10/2025. Algumas renovações recentes podem ser dispensadas; verificamos o seu caso.
+4. **Existe uma taxa extra de US$ 250?** Está prevista em lei americana, cobrada só se o visto for emitido, mas o início da cobrança ainda não está claro. Avisamos quando houver confirmação oficial.
+5. **O que vocês fazem além do DS-160?** Diagnóstico do perfil, documentos que mostram seus vínculos com o Brasil e simulação de entrevista com feedback.
 
-**Já teve o visto negado?**
-Analisamos seu histórico e o que mudou desde a última tentativa, para você não repetir as mesmas inconsistências.
-Botão: [WA: visto EUA] Falar com especialista
-
-Aviso da página: A Migrafácil é uma consultoria privada, sem vínculo com a Embaixada ou os consulados dos EUA. Não garantimos a emissão do visto: a decisão é exclusiva da autoridade consular. Não temos acesso a fila especial de agendamento.
+Aviso da página: Sem vínculo com a Embaixada ou os consulados dos EUA. Não garantimos a emissão do visto.
 
 ---
 
-## 6. Sobre
+## 8. /quem-somos
 
-Breadcrumb: Início › Sobre
+Título: **BrasilVisa: consultoria em imigração em São Paulo.**
+Texto: A BrasilVisa orienta estrangeiros que querem investir, morar ou regularizar sua situação no Brasil. Fundada por Clariane Alcantara, com trajetória em Direito Internacional e Migratório. [PREENCHER: confirmar anos de atuação; o site atual diz 9 em algumas páginas e 10 em outras]
+Dois endereços em São Paulo, um deles em frente à Polícia Federal da Água Branca.
 
-Título: **Migrafácil e RNE Brasil: uma equipe, dois caminhos.**
-Texto: A Migrafácil é a consultoria da equipe RNE Brasil. Orientamos estrangeiros que querem viver no Brasil e brasileiros que querem viajar para os Estados Unidos, com atendimento presencial em Sumaré e online para todo o Brasil e o exterior.
+**Como trabalhamos** (do site atual, sem superlativos): acompanhamento em cada etapa; soluções sob medida para cada caso; respeito aos prazos legais; transparência sobre taxas e honorários.
 
-**Missão:** Orientar processos de imigração e documentação com compromisso, clareza e qualidade.
-**Valores:** Segurança, transparência e excelência.
+**Depoimentos** (já publicados no site atual)
+- "Excelente prestação de serviço. Ótimo atendimento e profissionalismo, obrigado Doutora Clariane. Recomendo!" Rafaela, Salvador/BA
+- "Ótimo atendimento, profissionais comprometidos e atenciosos, com boa comunicação e suporte espetacular. Super recomendo!" Luiz, Campinas
+- "Só agradecer, excelente serviço, rápido e honesto. Gratidão e sucesso." Tiago, Curitiba/PR
+[PREENCHER: confirmar autorização de uso e, se possível, trocar por avaliações do Google com link]
 
-**Equipe**
-David Cristofhor de Lima, CEO
-[PREENCHER: foto real]
-[PREENCHER: bio curta, confirmando a experiência na Polícia Federal sem sugerir vínculo atual]
-Certificados e cursos: [PREENCHER: arquivos dos certificados; o site atual cita Atualização Jurídica em Direito Imigratório, Redação Oficial, Introdução às Migrações Internacionais no Brasil Contemporâneo e certificado da Polícia Federal]
-[PREENCHER: demais membros da equipe, com foto real]
-
----
-
-## 7. Cases de sucesso
-
-Breadcrumb: Início › Cases
-
-Título: **Casos reais, explicados do começo ao fim.**
-Texto: Cada caso abaixo foi publicado com autorização do cliente. Nomes podem ser abreviados para proteger a privacidade.
-
-Estrutura de cada case:
-- Situação: o que o cliente enfrentava.
-- O que fizemos: as etapas da consultoria.
-- Resultado: o que aconteceu, com data.
-
-[PREENCHER: 3 a 6 cases reais com autorização. Sugestão de mix: 1 renovação de CRNM, 1 naturalização, 1 residência por trabalho, 1 visto americano]
-
----
-
-## 8. Contato
-
-Breadcrumb: Início › Contato
-
-Título: **Fale com a gente. Retorno em até 24 horas.**
-Texto: O caminho mais rápido é o WhatsApp. Se preferir, deixe seus dados e retornamos.
-Botão: [WA: geral] Abrir WhatsApp
-
-**Formulário**
-Nome
-WhatsApp
-Email
-Assunto: CRNM · Residência · Naturalização · Visto americano · Outro
-Idioma preferido: Português · English · 中文
-Mensagem
-Caixa obrigatória: Li e concordo com a Política de Privacidade.
-Botão: Enviar
-Nota abaixo: Usamos seus dados só para responder ao seu contato.
-
-Endereço, mapa e botão "Como chegar".
-
----
-
-## 9. Perguntas frequentes (exatamente 5)
-
-1. **Minha CRNM vai vencer e não encontro data na Polícia Federal. O que eu faço?**
-A renovação pode ser pedida até 90 dias antes do vencimento, então comece cedo. O protocolo do pedido garante os mesmos direitos por até 180 dias. Atenção: se a sua residência for temporária, a carteira vencida gera multa por dia de atraso. Se for permanente, não há multa de renovação. Ajudamos você a montar o pedido e a buscar a data. [Fonte: PF, Dúvidas frequentes]
-
-2. **Tenho mais de 60 anos ou uma deficiência. Minha carteira ainda vence?**
-Pelo Decreto 9.199/2017, a carteira de residência por prazo indeterminado passa a ter validade indeterminada para quem completou 60 anos até o vencimento do documento e para pessoas com deficiência. Analisamos o seu caso para saber se você se enquadra e o que precisa ser feito. [Fonte: Decreto 9.199, art. 74. PREENCHER: confirmar redação vigente antes de publicar]
-
-3. **Quanto custa? O que é taxa do governo e o que é honorário?**
-As taxas oficiais são pagas diretamente ao governo: R$ 168,13 pelo pedido de autorização de residência e R$ 204,77 pela emissão da CRNM (gov.br, conferido em 23/10/2026). No visto americano, a taxa consular é paga ao governo dos EUA. Nosso honorário é separado e informado depois do diagnóstico, de acordo com a complexidade do seu caso.
-
-4. **Quanto tempo leva a naturalização? E se o pedido for negado?**
-O prazo oficial estimado é de até 180 dias, na plataforma Naturalizar-se. A ordinária pede 4 anos de residência (ou 1 ano com filho ou cônjuge brasileiro), e a extraordinária, mais de 15 anos. Se o pedido for negado, o recurso deve ser feito em até 10 dias. Nós orientamos o recurso e, se o caso exigir, indicamos advogados parceiros. [Fonte: gov.br]
-
-5. **Vocês garantem meu visto americano? O que fazem além do DS-160?**
-Não. Nenhuma consultoria pode garantir visto: a decisão é só do consulado. O que fazemos é reduzir os erros que levam à negativa: diagnóstico do perfil, DS-160 revisado, documentos que mostram seus vínculos com o Brasil e simulação de entrevista com feedback.
-
----
-
-## 10. Obrigado
-
-Título: **Recebemos sua mensagem.**
-Texto: Retornamos em até 24 horas, no idioma que você escolheu. Se for urgente, chame a gente agora no WhatsApp.
-Botão: [WA: geral] Abrir WhatsApp
-Link: Voltar ao início
-
----
-
-## 11. Página 404
-
-Título: **Esta página não existe.**
-Texto: O endereço pode ter mudado. Escolha por onde seguir:
-Links: CRNM · Naturalização · Residência · Visto americano · Início
-Botão: [WA: geral] Falar com especialista
-
----
-
-## 12. Política de Privacidade (estrutura)
-
-Responsável pelo tratamento: [PREENCHER: razão social e CNPJ]
-Seções:
-1. Quais dados coletamos (formulário de contato, WhatsApp, cookies de medição).
-2. Para que usamos (responder ao contato e prestar a consultoria contratada).
-3. Base legal (LGPD, Lei 13.709/2018: consentimento e execução de contrato).
-4. Com quem compartilhamos (nunca vendemos dados; compartilhamos só com órgãos oficiais quando o próprio cliente pede o serviço, e com fornecedores de hospedagem e mensagens).
-5. Por quanto tempo guardamos. [PREENCHER: prazo de guarda definido pela empresa]
-6. Seus direitos (acesso, correção, exclusão, portabilidade, revogação do consentimento).
-7. Cookies e como recusar.
-8. Contato do encarregado: [PREENCHER: nome e email do encarregado de dados]
-Última atualização: [data da publicação]
+[PREENCHER: foto real da equipe; números reais, se quiser exibir]
 
 ---
 
 ## Mensagens prontas do WhatsApp
-
-- **geral:** Olá, vim pelo site da Migrafácil e gostaria de orientação sobre o meu caso.
-- **CRNM:** Olá, preciso de ajuda com a minha CRNM (registro, renovação ou regularização). Pode me orientar?
-- **residência:** Olá, quero orientação sobre autorização de residência no Brasil.
-- **empresa:** Olá, sou de uma empresa que vai contratar um profissional estrangeiro e preciso de orientação.
-- **naturalização:** Olá, quero saber se posso me naturalizar brasileiro e como começar.
-- **visto EUA:** Olá, quero orientação para o processo do visto americano.
+- **geral:** Olá, vim pelo site da BrasilVisa e gostaria de orientação sobre o meu caso.
+- **investidor:** Olá, tenho interesse no visto de investidor no Brasil. Pode me orientar?
+- **imobiliario:** Olá, quero saber sobre residência no Brasil pela compra de imóvel.
+- **reuniao:** Olá, quero trazer minha família para morar comigo no Brasil.
+- **chineses:** 您好，我想了解在巴西的签证和居留。 / Olá, sou cidadão chinês e quero orientação sobre visto e residência no Brasil.
+- **crnm:** Olá, preciso de ajuda com a minha CRNM (registro, renovação ou regularização).
+- **naturalizacao:** Olá, quero saber se posso me naturalizar brasileiro.
+- **vistoEua:** Olá, quero orientação para o visto americano.
 
 ---
 
 ## Revisão (copy editing)
-
-- [x] Sem travessões nem traços usados como separador.
-- [x] Promessa de retorno em até 24 horas em todos os CTAs principais.
-- [x] FAQ com exatamente 5 perguntas, escolhidas pela pesquisa.
-- [x] Nenhuma garantia de aprovação, prazo ou fila.
-- [x] Nenhum número, depoimento ou case inventado: todos marcados com PREENCHER.
-- [x] Os 6 avisos legais da pesquisa cobertos (rodapé, páginas de serviço e formulário).
-- [x] Taxas e prazos com fonte e data de conferência.
+- [x] Sem travessões nem traços como separador.
+- [x] FAQ com exatamente 5 perguntas por página.
+- [x] Nenhuma garantia de aprovação, prazo ou fila; prazo de 30 a 90 dias apresentado como estimativa da equipe.
+- [x] Sem "advogados" como produto; a fundadora aparece só como trajetória (regra da OAB, PESQUISA.md seção 6).
+- [x] Sem menção a nacionalidades excluídas (isso é segmentação de anúncio, não texto do site).
+- [x] Isenção chinesa com a data oficial (31/12/2026), não a citada na reunião (26/12).
+- [x] "Procuração pública" trocada por "procuração para o representante no Brasil" (a lei não exige instrumento público).
+- [x] Nada sobre suspensão de pedidos de chineses pela PF (não há ato oficial publicado).
+- [x] Pendências do cliente marcadas com PREENCHER.

@@ -4,7 +4,8 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://www.migrafacil.net',
+  // Domínio provisório: trocar pelo domínio internacional (.com) quando for definido.
+  site: 'https://brasillvisa.com.br',
   trailingSlash: 'ignore',
   devToolbar: { enabled: false },
   // CSP com hashes gerados pelo Astro para os scripts e estilos inline (ilhas, ClientRouter).

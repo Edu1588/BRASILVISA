@@ -1,7 +1,7 @@
 """Leva as fotos geradas no Gemini (imagens-gemini/) para o site (app/src/assets/fotos/).
 
 Nomes esperados em imagens-gemini/ (qualquer extensão de imagem):
-  crnm, naturalizacao, residencia, visto-americano, escritorio
+  investidor, imobiliario, reuniao, chineses, crnm, naturalizacao, visto-americano, escritorio
 Cada foto é reduzida para no máximo 1600px de largura e salva em JPEG; o Astro gera as versões WebP na build.
 Uso: python -I tools/fotos.py
 """
@@ -15,10 +15,13 @@ SRC = ROOT / 'imagens-gemini'
 DST = ROOT / 'app' / 'src' / 'assets' / 'fotos'
 # nome do arquivo salvo → nome usado no código (chave de t.fotos)
 NOMES = {
+    'investidor': 'investidor',
+    'imobiliario': 'imobiliario',
+    'reuniao': 'reuniao',
+    'chineses': 'chineses',
     'crnm': 'crnm',
     'naturalizacao': 'naturalizacao',
-    'residencia': 'residencia',
-    'visto-americano': 'vistoAmericano',
+    'visto-americano': 'vistoEua',
     'escritorio': 'escritorio',
 }
 

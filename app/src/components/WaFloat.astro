@@ -1,13 +1,14 @@
 ---
 import WaIcon from './WaIcon.astro';
 import { DICTS, waLink, type Lang } from '../i18n';
-interface Props { lang: Lang }
-const { lang } = Astro.props;
+import type { Dict } from '../i18n/pt';
+interface Props { lang: Lang; wa?: keyof Dict['wa'] }
+const { lang, wa = 'geral' } = Astro.props;
 const t = DICTS[lang];
 ---
 
 <a
-  href={waLink(lang, 'geral')}
+  href={waLink(lang, wa)}
   target="_blank"
   rel="noopener"
   aria-label={`${t.nav.cta}. ${t.common.reply24}`}

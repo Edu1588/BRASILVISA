@@ -1,10 +1,10 @@
-# Migrafácil: site
+# BrasilVisa: landing pages
 
-Site da Migrafácil (equipe RNE Brasil): CRNM, autorização de residência, naturalização e visto americano. Português, inglês e chinês simplificado.
+Landing pages da BrasilVisa (consultoria em imigração, São Paulo): visto de investidor, investimento imobiliário, reunião familiar, cidadãos chineses, CRNM, naturalização e visto americano. Português, inglês e chinês simplificado.
 
 ## Estrutura
 - `app/`: código do site (Astro 7, React, Tailwind CSS v4, Lenis, GSAP, three.js)
-- `BRIEFING.md`, `PESQUISA.md`, `COPY.md`, `PRODUCT.md`, `DESIGN.md`, `REVISAO.md`: documentos de cada fase do projeto
+- `BRIEFING.md`, `PESQUISA.md`, `COPY.md`, `DESIGN.md`, `SEO.md`, `ENTREGA.md`: documentos de cada fase do projeto
 - `PROGRESSO.md`: andamento das fases e o que o cliente ainda precisa fornecer
 
 ## Rodar localmente
