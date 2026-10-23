@@ -18,7 +18,7 @@ Referência atual: https://www.migrafacil.net/asessoria-em-rne/
 - Botões de WhatsApp na cor oficial (#25D366) com o logo; botão redondo fixo no canto inferior direito (desktop)
 - Efeitos de entrada e rolagem (GSAP ScrollTrigger), desligados com movimento reduzido
 - Barra de ferramentas do Astro desligada no modo de desenvolvimento
-- Fotos geradas no Gemini para as 4 páginas de serviço e a home (aguardando o arquivo salvo em imagens-gemini/)
+- Fotos geradas no Gemini (sem rostos, exceto a de residência com perfis de pessoas genéricas) no topo das 4 páginas de serviço e na seção "Por que" da home; otimizadas em WebP pelo Astro
 
 ## O que o cliente precisa fornecer
 - Números reais dos contadores (o site atual mostra "+0" em todos)

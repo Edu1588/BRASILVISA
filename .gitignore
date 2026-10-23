@@ -12,3 +12,6 @@ dist/
 !.env.example
 .DS_Store
 Thumbs.db
+
+# Originais das fotos do Gemini (as versões usadas ficam em app/src/assets/fotos)
+imagens-gemini/
