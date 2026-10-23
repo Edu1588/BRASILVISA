@@ -25,6 +25,13 @@ const pt = {
     vistoEua: 'Olá, quero orientação para o processo do visto americano.',
   },
 
+  fotos: {
+    crnm: 'Mãos organizando documentos e uma carteira de identificação sobre a mesa',
+    naturalizacao: 'Pessoa de costas junto à janela segurando uma pasta de documentos',
+    residencia: 'Aperto de mãos sobre uma mesa com contrato em um escritório',
+    vistoAmericano: 'Mãos conferindo um passaporte e um cartão de embarque',
+    escritorio: 'Mesa de reunião com pastas de documentos e um passaporte em escritório iluminado',
+  },
   nav: {
     home: 'Início',
     crnm: 'CRNM',
@@ -72,9 +79,8 @@ const pt = {
 
   home: {
     meta: {
-      title: 'Migrafácil: CRNM, residência, naturalização e visto americano',
-      description:
-        'Consultoria em imigração em Sumaré SP e online. CRNM (antigo RNE), autorização de residência, naturalização e visto americano. Atendimento em português, inglês e chinês. Retorno em até 24 horas.',
+      title: 'Migrafácil: CRNM, residência, naturalização e visto EUA',
+      description: 'Consultoria em imigração em Sumaré SP e online: CRNM (antigo RNE), residência, naturalização e visto americano. Atendimento em 3 idiomas, retorno em 24h.',
     },
     hero: {
       kicker: 'Consultoria em imigração em Sumaré SP e online',
@@ -150,7 +156,7 @@ const pt = {
 
   crnm: {
     meta: {
-      title: 'CRNM (antigo RNE): registro, renovação e regularização | Migrafácil',
+      title: 'CRNM (antigo RNE): registro e renovação | Migrafácil',
       description:
         'Consultoria para registro, renovação e regularização da CRNM, o antigo RNE. Prazos e taxas oficiais da Polícia Federal explicados. Retorno em até 24 horas.',
     },
@@ -225,7 +231,7 @@ const pt = {
 
   naturalizacao: {
     meta: {
-      title: 'Naturalização brasileira: requisitos, prazos e dossiê | Migrafácil',
+      title: 'Naturalização brasileira: requisitos e prazos | Migrafácil',
       description:
         'Consultoria em naturalização brasileira ordinária, extraordinária e provisória. Diagnóstico de elegibilidade, dossiê completo e acompanhamento até a decisão.',
     },
@@ -275,9 +281,8 @@ const pt = {
 
   residencia: {
     meta: {
-      title: 'Autorização de residência por trabalho ou investimento | Migrafácil',
-      description:
-        'Consultoria em autorização de residência no Brasil para profissionais estrangeiros, empresas que contratam e investidores. Dossiê para MigranteWeb e Polícia Federal.',
+      title: 'Residência por trabalho ou investimento | Migrafácil',
+      description: 'Consultoria em autorização de residência no Brasil para profissionais estrangeiros, empresas e investidores. Dossiê para MigranteWeb e Polícia Federal.',
     },
     hero: {
       title: 'Residência no Brasil por trabalho ou investimento, com o pedido bem montado.',
@@ -311,7 +316,7 @@ const pt = {
 
   vistoAmericano: {
     meta: {
-      title: 'Assessoria para visto americano: DS-160 e entrevista | Migrafácil',
+      title: 'Visto americano: DS-160 e entrevista | Migrafácil',
       description:
         'Assessoria para visto americano em Sumaré, Campinas e online. DS-160 revisado, checklist de documentos e simulação de entrevista. Sem promessa de aprovação.',
     },
@@ -396,7 +401,7 @@ const pt = {
 
   perguntas: {
     meta: {
-      title: 'Perguntas frequentes sobre CRNM, naturalização e visto | Migrafácil',
+      title: 'Perguntas sobre CRNM, naturalização e visto | Migrafácil',
       description: 'CRNM vencendo, validade aos 60 anos, taxas oficiais, prazo da naturalização e garantia de visto americano: respostas com fonte oficial.',
     },
     title: 'Perguntas frequentes',
@@ -461,7 +466,7 @@ const pt = {
   },
 
   obrigado: {
-    meta: { title: 'Mensagem recebida | Migrafácil', description: 'Recebemos sua mensagem. Retornamos em até 24 horas.' },
+    meta: { title: 'Mensagem recebida | Migrafácil', description: 'Recebemos sua mensagem pelo site da Migrafácil. Retornamos em até 24 horas, no idioma que você escolheu.' },
     title: 'Recebemos sua mensagem.',
     text: 'Retornamos em até 24 horas, no idioma que você escolheu. Se for urgente, chame a gente agora no WhatsApp.',
     waButton: 'Abrir WhatsApp',

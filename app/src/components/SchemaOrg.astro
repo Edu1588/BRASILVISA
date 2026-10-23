@@ -1,0 +1,36 @@
+---
+// Dados estruturados da empresa (schema local), presentes em todas as páginas.
+// Horário de funcionamento e coordenadas ficam de fora até o cliente confirmar.
+import { DICTS, EMAIL, SOCIAL, href, type Lang } from '../i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const site = Astro.site!;
+const t = DICTS[lang];
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': new URL('/#empresa', site).href,
+  name: 'Migrafácil',
+  alternateName: 'RNE Brasil',
+  description: t.home.meta.description,
+  url: new URL(href(lang, 'home'), site).href,
+  logo: new URL('/logo-cor.webp', site).href,
+  image: new URL(`/og/${lang}/home.png`, site).href,
+  telephone: '+55-11-96395-9030',
+  email: EMAIL,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Alameda dos Professores, 90, Parque Villa Flores',
+    addressLocality: 'Sumaré',
+    addressRegion: 'SP',
+    postalCode: '13175-670',
+    addressCountry: 'BR',
+  },
+  areaServed: { '@type': 'Country', name: 'Brasil' },
+  availableLanguage: ['pt-BR', 'en', 'zh-CN'],
+  founder: { '@type': 'Person', name: 'David Cristofhor de Lima', jobTitle: 'CEO' },
+  sameAs: Object.values(SOCIAL),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />

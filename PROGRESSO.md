@@ -10,9 +10,15 @@ Referência atual: https://www.migrafacil.net/asessoria-em-rne/
 | 4. Design | concluída | PRODUCT.md e DESIGN.md: papel de documento oficial, cores do logo, Schibsted Grotesk, ficha CRNM com check no herói |
 | 5. Construção | concluída | Astro 5 + React + Tailwind v4 + Lenis + GSAP em app/; 11 páginas x 3 idiomas + 404 (34 páginas); build sem erros. Azul noite #03034A do site de referência aplicado no herói e seções escuras, a pedido |
 | 6. Extras | concluída | Elemento 3D (three.js) no herói da home: carteira e passaporte com espessura, inclinação pelo mouse e brilho holográfico, textura gerada da própria ilustração SVG; só desktop com WebGL e sem movimento reduzido; carregado sob demanda (141 kB gzip) |
-| 7. Revisão de design | aguardando ok | REVISAO.md: nenhum crítico; 4 importantes e 2 polimentos corrigidos, 2 itens justificados; contraste AA em 13 páginas |
-| 8. SEO | pendente | |
+| 7. Revisão de design | concluída | REVISAO.md: nenhum crítico; 4 importantes e 2 polimentos corrigidos, 2 itens justificados; contraste AA em 13 páginas |
+| 8. SEO | aguardando ok | SEO.md: sitemap.xml com hreflang, robots.txt, llms.txt, títulos e descriptions ajustados, 30 imagens Open Graph, schema ProfessionalService + Service; auditoria sem itens críticos |
 | 9. Segurança e entrega | pendente | |
+
+## Ajustes pedidos durante a Fase 8
+- Botões de WhatsApp na cor oficial (#25D366) com o logo; botão redondo fixo no canto inferior direito (desktop)
+- Efeitos de entrada e rolagem (GSAP ScrollTrigger), desligados com movimento reduzido
+- Barra de ferramentas do Astro desligada no modo de desenvolvimento
+- Fotos geradas no Gemini para as 4 páginas de serviço e a home (aguardando o arquivo salvo em imagens-gemini/)
 
 ## O que o cliente precisa fornecer
 - Números reais dos contadores (o site atual mostra "+0" em todos)

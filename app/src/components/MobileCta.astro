@@ -1,4 +1,5 @@
 ---
+import WaIcon from './WaIcon.astro';
 import { DICTS, waLink, type Lang } from '../i18n';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -6,8 +7,11 @@ const t = DICTS[lang];
 ---
 
 <div class="fixed inset-x-0 bottom-0 z-30 border-t border-guilloche bg-papel/95 p-3 backdrop-blur lg:hidden">
-  <a href={waLink(lang, 'geral')} target="_blank" rel="noopener" class="btn btn-primary w-full flex-col !gap-0 !py-2 leading-tight">
-    <span>{t.common.mobileCta}</span>
-    <span class="text-xs font-normal opacity-85">{t.common.mobileCtaNote}</span>
+  <a href={waLink(lang, 'geral')} target="_blank" rel="noopener" class="btn btn-wa w-full !py-2">
+    <WaIcon class="h-6 w-6" />
+    <span class="flex flex-col items-start leading-tight">
+      <span>{t.common.mobileCta}</span>
+      <span class="text-xs font-normal">{t.common.mobileCtaNote}</span>
+    </span>
   </a>
 </div>

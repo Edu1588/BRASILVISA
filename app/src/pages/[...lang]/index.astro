@@ -1,9 +1,11 @@
 ---
+import WaIcon from '../../components/WaIcon.astro';
 import Base from '../../layouts/Base.astro';
 import HeroDoc from '../../components/HeroDoc.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import MapEmbed from '../../components/MapEmbed.astro';
 import Faq from '../../components/Faq.tsx';
+import Foto from '../../components/Foto.astro';
 import { DICTS, href, langPaths, waLink, type Lang, type PageKey } from '../../i18n';
 
 export const getStaticPaths = langPaths;
@@ -22,7 +24,7 @@ const foreignLinks: PageKey[] = ['crnm', 'residencia', 'naturalizacao'];
         <h1 class="hero-title mt-4 max-w-[17ch] text-[clamp(2.4rem,5vw,4.1rem)] leading-[1.04]">{h.hero.title}</h1>
         <p class="measure mt-6 text-lg text-branco/80">{h.hero.subtitle}</p>
         <div class="mt-9 flex flex-wrap gap-3">
-          <a href={waLink(lang, 'geral')} target="_blank" rel="noopener" class="btn btn-primary">{h.hero.cta}</a>
+          <a href={waLink(lang, 'geral')} target="_blank" rel="noopener" class="btn btn-wa"><WaIcon />{h.hero.cta}</a>
           <a href="#servicos" class="btn btn-ghost-light">{h.hero.secondary}</a>
         </div>
         <p class="mt-4 text-sm text-branco/70">{h.hero.note}</p>
@@ -89,7 +91,10 @@ const foreignLinks: PageKey[] = ['crnm', 'residencia', 'naturalizacao'];
   <!-- Por que -->
   <section class="section guilloche-noite">
     <div class="wrap grid gap-12 lg:grid-cols-[0.9fr_1.4fr]">
-      <h2 class="max-w-[16ch] text-[clamp(1.9rem,3.4vw,2.7rem)]">{h.why.title}</h2>
+      <div>
+        <h2 class="max-w-[16ch] text-[clamp(1.9rem,3.4vw,2.7rem)]">{h.why.title}</h2>
+        <Foto name="escritorio" alt={t.fotos.escritorio} class="mt-10 aspect-[4/3] w-full rounded-2xl object-cover" />
+      </div>
       <dl class="grid gap-x-12 gap-y-10 sm:grid-cols-2">
         {
           h.why.items.map((w) => (
@@ -185,20 +190,3 @@ const foreignLinks: PageKey[] = ['crnm', 'residencia', 'naturalizacao'];
   <div class="pt-[clamp(72px,10vw,136px)]"><MapEmbed lang={lang} /></div>
 </Base>
 
-<script>
-  import gsap from 'gsap';
-  import { SplitText } from 'gsap/SplitText';
-  gsap.registerPlugin(SplitText);
-  function intro() {
-    const el = document.querySelector('.hero-title');
-    if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    // Chinês não tem espaços entre palavras: anima por linha, que funciona nos três idiomas.
-    SplitText.create(el, {
-      type: 'lines',
-      mask: 'lines',
-      autoSplit: true,
-      onSplit: (self) => gsap.from(self.lines, { yPercent: 100, duration: 0.8, stagger: 0.09, ease: 'power3.out' }),
-    });
-  }
-  document.addEventListener('astro:page-load', intro);
-</script>

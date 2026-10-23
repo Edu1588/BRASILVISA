@@ -88,6 +88,9 @@
   .btn-primary:hover { background: var(--color-carmim-vivo); }
   .btn-ghost { color: var(--color-tinta); box-shadow: inset 0 0 0 1.5px var(--color-tinta); }
   .btn-ghost:hover { background: var(--color-tinta); color: var(--color-branco); }
+  /* Botões de WhatsApp: verde oficial da marca. Texto verde escuro para passar contraste AA (branco no #25D366 dá 1,98:1). */
+  .btn-wa { background: #25d366; color: #053b1e; }
+  .btn-wa:hover { background: #1fbe5b; }
   .btn-light { background: var(--color-branco); color: var(--color-tinta); }
   .btn-light:hover { background: var(--color-papel); }
 

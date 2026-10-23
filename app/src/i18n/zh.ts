@@ -25,6 +25,13 @@ const zh: Dict = {
     vistoEua: '您好，我想咨询美国签证的办理流程。',
   },
 
+  fotos: {
+    crnm: '双手在桌上整理文件和一张身份卡',
+    naturalizacao: '一人背对镜头站在窗边，手持文件夹',
+    residencia: '办公室里，双方在放有合同的桌前握手',
+    vistoAmericano: '双手核对护照和登机牌',
+    escritorio: '明亮办公室里的会议桌，放着文件夹和护照',
+  },
   nav: {
     home: '首页',
     crnm: 'CRNM 居留卡',

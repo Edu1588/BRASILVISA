@@ -1,4 +1,5 @@
 ---
+import WaIcon from './WaIcon.astro';
 import { DICTS, LANGS, href, waLink, type Lang, type PageKey } from '../i18n';
 
 interface Props { lang: Lang; page: PageKey | '404' }
@@ -53,7 +54,7 @@ const target = page === '404' ? 'home' : page;
           ))
         }
       </ul>
-      <a href={waLink(lang, 'geral')} target="_blank" rel="noopener" class="btn btn-primary hidden !min-h-11 !py-2 whitespace-nowrap text-[0.95rem] md:inline-flex">
+      <a href={waLink(lang, 'geral')} target="_blank" rel="noopener" class="btn btn-wa hidden !min-h-11 !py-2 whitespace-nowrap text-[0.95rem] md:inline-flex"><WaIcon />
         {t.nav.cta}
       </a>
       <button

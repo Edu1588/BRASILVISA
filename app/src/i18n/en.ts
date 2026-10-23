@@ -25,6 +25,13 @@ const en: Dict = {
     vistoEua: 'Hello, I would like guidance on the US visa process.',
   },
 
+  fotos: {
+    crnm: 'Hands organizing documents and an ID card on a desk',
+    naturalizacao: 'Person seen from behind by a window holding a document folder',
+    residencia: 'Handshake over a desk with a contract in an office',
+    vistoAmericano: 'Hands checking a passport and a boarding pass',
+    escritorio: 'Meeting table with document folders and a passport in a bright office',
+  },
   nav: {
     home: 'Home',
     crnm: 'CRNM',
@@ -73,8 +80,7 @@ const en: Dict = {
   home: {
     meta: {
       title: 'Migrafácil: CRNM, residence, naturalization and US visa',
-      description:
-        'Immigration consultancy in Sumaré SP and online. CRNM (formerly RNE), residence permits, naturalization and US visas. Service in Portuguese, English and Chinese. Reply within 24 hours.',
+      description: 'Immigration consultancy in Sumaré SP and online: CRNM (formerly RNE), residence, naturalization and US visas. Service in 3 languages, reply in 24h.',
     },
     hero: {
       kicker: 'Immigration consultancy in Sumaré SP and online',
@@ -150,9 +156,8 @@ const en: Dict = {
 
   crnm: {
     meta: {
-      title: 'CRNM (formerly RNE): registration, renewal and regularization | Migrafácil',
-      description:
-        'Consultancy for CRNM registration, renewal and regularization, formerly known as RNE. Federal Police deadlines and official fees explained. Reply within 24 hours.',
+      title: 'CRNM (formerly RNE): registration and renewal | Migrafácil',
+      description: 'Consulting for CRNM (formerly RNE) registration, renewal and regularization, with official Federal Police deadlines and fees explained. Reply in 24 hours.',
     },
     hero: {
       title: 'CRNM without the headache: registration, renewal and regularization.',
@@ -225,7 +230,7 @@ const en: Dict = {
 
   naturalizacao: {
     meta: {
-      title: 'Brazilian naturalization: requirements, timelines and file | Migrafácil',
+      title: 'Brazilian naturalization: requirements | Migrafácil',
       description:
         'Consultancy for ordinary, extraordinary and provisional Brazilian naturalization. Eligibility assessment, complete file and follow-up until the decision.',
     },
@@ -461,7 +466,7 @@ const en: Dict = {
   },
 
   obrigado: {
-    meta: { title: 'Message received | Migrafácil', description: 'We received your message. We reply within 24 hours.' },
+    meta: { title: 'Message received | Migrafácil', description: 'We received your message through the Migrafácil website. We reply within 24 hours, in the language you chose.' },
     title: 'We received your message.',
     text: 'We will reply within 24 hours, in the language you chose. If it is urgent, message us now on WhatsApp.',
     waButton: 'Open WhatsApp',

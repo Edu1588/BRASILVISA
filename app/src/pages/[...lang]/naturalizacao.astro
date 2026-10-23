@@ -4,6 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import ServiceAside from '../../components/ServiceAside.astro';
 import SourceStamp from '../../components/SourceStamp.astro';
 import CtaBand from '../../components/CtaBand.astro';
+import ServiceSchema from '../../components/ServiceSchema.astro';
 import { DICTS, langPaths, type Lang } from '../../i18n';
 
 export const getStaticPaths = langPaths;
@@ -13,7 +14,8 @@ const n = t.naturalizacao;
 ---
 
 <Base lang={lang} page="naturalizacao" title={n.meta.title} description={n.meta.description}>
-  <PageHero lang={lang} page="naturalizacao" label={t.nav.naturalizacao} title={n.hero.title} subtitle={n.hero.subtitle} wa="naturalizacao" />
+  <ServiceSchema slot="head" lang={lang} page="naturalizacao" name={t.nav.naturalizacao} description={t.naturalizacao.meta.description} />
+  <PageHero lang={lang} page="naturalizacao" label={t.nav.naturalizacao} title={n.hero.title} subtitle={n.hero.subtitle} wa="naturalizacao" foto="naturalizacao" />
 
   <div class="wrap section grid gap-14 lg:grid-cols-[minmax(0,1fr)_320px]">
     <div class="space-y-16">

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /obrigado
+Disallow: /en/obrigado
+Disallow: /zh/obrigado
+
+Sitemap: https://www.migrafacil.net/sitemap.xml

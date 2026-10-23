@@ -1,4 +1,5 @@
 ---
+import WaIcon from '../../components/WaIcon.astro';
 import Base from '../../layouts/Base.astro';
 import { DICTS, langPaths, href, waLink, type Lang } from '../../i18n';
 
@@ -15,7 +16,7 @@ const o = t.obrigado;
       <h1 class="mt-6 text-[clamp(2rem,4vw,3.2rem)]">{o.title}</h1>
       <p class="mx-auto mt-4 max-w-[52ch] text-lg text-grafite-suave">{o.text}</p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
-        <a href={waLink(lang, 'geral')} target="_blank" rel="noopener" class="btn btn-primary">{o.waButton}</a>
+        <a href={waLink(lang, 'geral')} target="_blank" rel="noopener" class="btn btn-wa"><WaIcon />{o.waButton}</a>
         <a href={href(lang, 'home')} class="btn btn-ghost">{o.back}</a>
       </div>
     </div>

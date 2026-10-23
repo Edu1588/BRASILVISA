@@ -1,4 +1,5 @@
 ---
+import WaIcon from '../components/WaIcon.astro';
 import Base from '../layouts/Base.astro';
 import { DICTS, LANGS, href, waLink, type PageKey } from '../i18n';
 
@@ -16,7 +17,7 @@ const links: PageKey[] = ['crnm', 'naturalizacao', 'residencia', 'vistoAmericano
       <ul class="mt-8 flex flex-wrap gap-3">
         {links.map((p) => <li><a href={href('pt', p)} class="btn btn-ghost">{t.nav[p]}</a></li>)}
       </ul>
-      <a href={waLink('pt', 'geral')} target="_blank" rel="noopener" class="btn btn-primary mt-8">{t.common.talk}</a>
+      <a href={waLink('pt', 'geral')} target="_blank" rel="noopener" class="btn btn-wa mt-8"><WaIcon />{t.common.talk}</a>
       <div class="mt-14 grid gap-6 border-t border-guilloche pt-8 sm:grid-cols-2">
         {
           LANGS.filter((l) => l !== 'pt').map((l) => (

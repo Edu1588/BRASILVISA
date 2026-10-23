@@ -39,7 +39,8 @@ export const SLUGS: Record<PageKey, string> = {
 export function href(lang: Lang, page: PageKey): string {
   const slug = SLUGS[page];
   const prefix = lang === 'pt' ? '' : `/${lang}`;
-  return slug ? `${prefix}/${slug}` : prefix || '/';
+  // Barra final igual ao formato de saída da build (pasta/index.html), para canonical e links baterem.
+  return slug ? `${prefix}/${slug}/` : `${prefix}/`;
 }
 
 export function waLink(lang: Lang, key: keyof Dict['wa']): string {

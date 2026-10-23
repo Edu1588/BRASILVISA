@@ -1,8 +1,10 @@
 ---
+import WaIcon from '../../components/WaIcon.astro';
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import ServiceAside from '../../components/ServiceAside.astro';
 import CtaBand from '../../components/CtaBand.astro';
+import ServiceSchema from '../../components/ServiceSchema.astro';
 import { DICTS, langPaths, waLink, type Lang } from '../../i18n';
 
 export const getStaticPaths = langPaths;
@@ -12,7 +14,8 @@ const r = t.residencia;
 ---
 
 <Base lang={lang} page="residencia" title={r.meta.title} description={r.meta.description}>
-  <PageHero lang={lang} page="residencia" label={t.nav.residencia} title={r.hero.title} subtitle={r.hero.subtitle} wa="residencia" />
+  <ServiceSchema slot="head" lang={lang} page="residencia" name={t.nav.residencia} description={t.residencia.meta.description} />
+  <PageHero lang={lang} page="residencia" label={t.nav.residencia} title={r.hero.title} subtitle={r.hero.subtitle} wa="residencia" foto="residencia" />
 
   <div class="wrap section grid gap-14 lg:grid-cols-[minmax(0,1fr)_320px]">
     <div class="space-y-16">
@@ -47,7 +50,7 @@ const r = t.residencia;
       <section class="rounded-2xl bg-tinta p-8 text-branco md:p-10">
         <h2 class="text-2xl !text-branco">{r.company.title}</h2>
         <p class="measure mt-3 text-branco/80">{r.company.text}</p>
-        <a href={waLink(lang, 'empresa')} target="_blank" rel="noopener" class="btn btn-light mt-6">{t.common.talk}</a>
+        <a href={waLink(lang, 'empresa')} target="_blank" rel="noopener" class="btn btn-wa mt-6"><WaIcon />{t.common.talk}</a>
       </section>
     </div>
 
