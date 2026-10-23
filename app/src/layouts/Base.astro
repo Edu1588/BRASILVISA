@@ -1,0 +1,75 @@
+---
+import '@fontsource-variable/schibsted-grotesk';
+import '../styles/global.css';
+import noto400 from '@fontsource/noto-sans-sc/400.css?url';
+import noto700 from '@fontsource/noto-sans-sc/700.css?url';
+import { ClientRouter } from 'astro:transitions';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileCta from '../components/MobileCta.astro';
+import { DICTS, LANGS, href, type Lang, type PageKey } from '../i18n';
+
+interface Props {
+  lang: Lang;
+  page: PageKey | '404';
+  title: string;
+  description: string;
+  noindex?: boolean;
+}
+const { lang, page, title, description, noindex = false } = Astro.props;
+const t = DICTS[lang];
+const site = Astro.site!;
+const canonical = page === '404' ? undefined : new URL(href(lang, page), site).href;
+const hreflang = { pt: 'pt-BR', en: 'en', zh: 'zh-CN' } as const;
+---
+
+<!doctype html>
+<html lang={t.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    {canonical && <link rel="canonical" href={canonical} />}
+    {
+      page !== '404' &&
+        LANGS.map((l) => (
+          <link rel="alternate" hreflang={hreflang[l]} href={new URL(href(l, page as PageKey), site).href} />
+        ))
+    }
+    {page !== '404' && <link rel="alternate" hreflang="x-default" href={new URL(href('pt', page as PageKey), site).href} />}
+    {lang === 'zh' && <link rel="stylesheet" href={noto400} />}
+    {lang === 'zh' && <link rel="stylesheet" href={noto700} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#242374" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Migrafácil" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta property="og:locale" content={t.lang.replace('-', '_')} />
+    <slot name="head" />
+    <ClientRouter />
+  </head>
+  <body class="flex flex-col">
+    <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 btn btn-light">{t.nav.skip}</a>
+    <Header lang={lang} page={page} />
+    <main id="conteudo" class="flex-1">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+    <MobileCta lang={lang} />
+    <script>
+      import Lenis from 'lenis';
+      let lenis: Lenis | null = null;
+      function start() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        lenis?.destroy();
+        lenis = new Lenis({ autoRaf: true, anchors: true });
+      }
+      document.addEventListener('astro:page-load', start);
+      document.addEventListener('astro:before-swap', () => lenis?.destroy());
+    </script>
+  </body>
+</html>

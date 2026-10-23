@@ -1,0 +1,128 @@
+---
+import { DICTS, LANGS, href, waLink, type Lang, type PageKey } from '../i18n';
+
+interface Props { lang: Lang; page: PageKey | '404' }
+const { lang, page } = Astro.props;
+const t = DICTS[lang];
+const main: PageKey[] = ['crnm', 'naturalizacao', 'residencia', 'vistoAmericano', 'sobre', 'contato'];
+const all: PageKey[] = ['home', 'crnm', 'naturalizacao', 'residencia', 'vistoAmericano', 'sobre', 'cases', 'perguntas', 'contato'];
+const langShort: Record<Lang, string> = { pt: 'PT', en: 'EN', zh: '中文' };
+const target = page === '404' ? 'home' : page;
+---
+
+<header class="sticky top-0 z-40 border-b border-guilloche/70 bg-papel/92 backdrop-blur">
+  <div class="wrap flex h-[4.5rem] items-center justify-between gap-6">
+    <a href={href(lang, 'home')} class="shrink-0" aria-label="Migrafácil">
+      <img src="/logo-cor.webp" alt="Migrafácil" width="106" height="48" class="h-12 w-auto" />
+    </a>
+
+    <nav aria-label="Principal" class="hidden xl:block">
+      <ul class="flex items-center gap-6 whitespace-nowrap text-[0.95rem] font-medium">
+        {
+          main.map((p) => (
+            <li>
+              <a
+                href={href(lang, p)}
+                class:list={['py-2 hover:text-carmim', p === page ? 'text-carmim' : 'text-grafite']}
+                aria-current={p === page ? 'page' : undefined}
+              >
+                {t.nav[p]}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <ul class="hidden items-center gap-1 whitespace-nowrap text-sm sm:flex" aria-label={t.nav.languages}>
+        {
+          LANGS.map((l) => (
+            <li>
+              <a
+                href={href(l, target)}
+                lang={DICTS[l].lang}
+                hreflang={DICTS[l].lang}
+                class:list={['rounded-full px-2.5 py-1', l === lang ? 'bg-tinta text-branco' : 'text-grafite-suave hover:text-tinta']}
+                aria-current={l === lang ? 'true' : undefined}
+                data-astro-reload
+              >
+                {langShort[l]}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a href={waLink(lang, 'geral')} target="_blank" rel="noopener" class="btn btn-primary hidden !min-h-11 !py-2 whitespace-nowrap text-[0.95rem] md:inline-flex">
+        {t.nav.cta}
+      </a>
+      <button
+        type="button"
+        class="inline-flex h-11 items-center gap-2 rounded-full px-3 font-semibold text-tinta ring-1 ring-tinta/30 xl:hidden"
+        aria-expanded="false"
+        aria-controls="menu-mobile"
+        data-menu-open
+      >
+        {t.nav.menu}
+      </button>
+    </div>
+  </div>
+
+  <div id="menu-mobile" class="fixed inset-0 z-50 hidden flex-col bg-tinta text-branco" data-menu>
+    <div class="wrap flex h-[4.5rem] items-center justify-between">
+      <img src="/logo-escuro.webp" alt="" width="106" height="48" class="h-12 w-auto" />
+      <button type="button" class="h-11 rounded-full px-4 font-semibold ring-1 ring-branco/40" data-menu-close>{t.nav.close}</button>
+    </div>
+    <nav aria-label="Menu" class="wrap flex-1 overflow-y-auto pb-28">
+      <ul class="mt-6 space-y-1 text-2xl font-semibold">
+        {
+          all.map((p) => (
+            <li>
+              <a href={href(lang, p)} class="block py-2" aria-current={p === page ? 'page' : undefined}>
+                {t.nav[p]}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <ul class="mt-8 flex gap-2" aria-label={t.nav.languages}>
+        {
+          LANGS.map((l) => (
+            <li>
+              <a
+                href={href(l, target)}
+                lang={DICTS[l].lang}
+                class:list={['inline-block rounded-full px-4 py-2', l === lang ? 'bg-branco text-tinta' : 'ring-1 ring-branco/40']}
+                data-astro-reload
+              >
+                {langShort[l]}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  function initMenu() {
+    const menu = document.querySelector<HTMLElement>('[data-menu]');
+    const open = document.querySelector<HTMLButtonElement>('[data-menu-open]');
+    const close = document.querySelector<HTMLButtonElement>('[data-menu-close]');
+    if (!menu || !open || !close || open.dataset.bound) return;
+    open.dataset.bound = '1';
+    const set = (v: boolean) => {
+      menu.classList.toggle('hidden', !v);
+      menu.classList.toggle('flex', v);
+      open.setAttribute('aria-expanded', String(v));
+      document.documentElement.style.overflow = v ? 'hidden' : '';
+      (v ? close : open).focus();
+    };
+    open.addEventListener('click', () => set(true));
+    close.addEventListener('click', () => set(false));
+    menu.addEventListener('keydown', (e) => e.key === 'Escape' && set(false));
+    menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => set(false)));
+  }
+  document.addEventListener('astro:page-load', initMenu);
+</script>

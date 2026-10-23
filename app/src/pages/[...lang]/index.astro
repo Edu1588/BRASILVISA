@@ -1,0 +1,204 @@
+---
+import Base from '../../layouts/Base.astro';
+import HeroDoc from '../../components/HeroDoc.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import MapEmbed from '../../components/MapEmbed.astro';
+import Faq from '../../components/Faq.tsx';
+import { DICTS, href, langPaths, waLink, type Lang, type PageKey } from '../../i18n';
+
+export const getStaticPaths = langPaths;
+const { lang } = Astro.props as { lang: Lang };
+const t = DICTS[lang];
+const h = t.home;
+const foreignLinks: PageKey[] = ['crnm', 'residencia', 'naturalizacao'];
+---
+
+<Base lang={lang} page="home" title={h.meta.title} description={h.meta.description}>
+  <!-- Herói -->
+  <section class="guilloche-noite overflow-hidden">
+    <div class="wrap grid items-center gap-10 py-12 lg:min-h-[min(calc(100svh-4.5rem),880px)] lg:grid-cols-[1.05fr_1fr] lg:py-8">
+      <div>
+        <p class="font-medium text-branco/70">{h.hero.kicker}</p>
+        <h1 class="hero-title mt-4 max-w-[17ch] text-[clamp(2.4rem,5vw,4.1rem)] leading-[1.04]">{h.hero.title}</h1>
+        <p class="measure mt-6 text-lg text-branco/80">{h.hero.subtitle}</p>
+        <div class="mt-9 flex flex-wrap gap-3">
+          <a href={waLink(lang, 'geral')} target="_blank" rel="noopener" class="btn btn-primary">{h.hero.cta}</a>
+          <a href="#servicos" class="btn btn-ghost-light">{h.hero.secondary}</a>
+        </div>
+        <p class="mt-4 text-sm text-branco/70">{h.hero.note}</p>
+      </div>
+      <div class="flex justify-center lg:justify-end">
+        <HeroDoc />
+      </div>
+    </div>
+  </section>
+
+  <!-- Duas portas -->
+  <section aria-labelledby="portas" class="bg-papel">
+    <h2 id="portas" class="sr-only">{h.paths.title}</h2>
+    <div class="grid md:grid-cols-2">
+      <div class="bg-tinta text-branco">
+        <div class="ml-auto max-w-[600px] px-[clamp(1rem,4vw,2.5rem)] py-16 md:py-20">
+          <h3 class="max-w-[16ch] text-[clamp(1.7rem,2.8vw,2.4rem)] !text-branco">{h.paths.foreign.title}</h3>
+          <p class="mt-4 max-w-[46ch] text-branco/80">{h.paths.foreign.text}</p>
+          <ul class="mt-8 space-y-3">
+            {
+              foreignLinks.map((p) => (
+                <li>
+                  <a href={href(lang, p)} class="flex items-center justify-between gap-4 border-b border-branco/20 pb-3 text-lg font-semibold hover:text-[#ffb3c6]">
+                    <span>{t.nav[p]}</span>
+                    <span aria-hidden="true" class="h-4 w-4 bg-current [mask:url(/check.svg)_center/contain_no-repeat]" />
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+      <div class="bg-branco">
+        <div class="max-w-[600px] px-[clamp(1rem,4vw,2.5rem)] py-16 md:py-20">
+          <h3 class="max-w-[18ch] text-[clamp(1.7rem,2.8vw,2.4rem)]">{h.paths.brazilian.title}</h3>
+          <p class="mt-4 max-w-[46ch] text-grafite-suave">{h.paths.brazilian.text}</p>
+          <ul class="check-list mt-6">{t.vistoAmericano.included.items.slice(1, 4).map((i) => <li class="!my-3">{i}</li>)}</ul>
+          <a href={href(lang, 'vistoAmericano')} class="btn btn-ghost mt-8">{h.paths.brazilian.link}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços em linhas -->
+  <section id="servicos" class="section scroll-mt-20">
+    <div class="wrap">
+      <h2 class="text-[clamp(1.9rem,3.4vw,2.7rem)]">{h.services.title}</h2>
+      <ul class="mt-10 border-t border-guilloche">
+        {
+          h.services.items.map((s) => (
+            <li class="border-b border-guilloche">
+              <a href={href(lang, s.key as PageKey)} class="group grid gap-2 py-7 md:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)_auto] md:items-baseline md:gap-10">
+                <span class="text-xl font-bold text-tinta group-hover:text-carmim">{s.name}</span>
+                <span class="text-grafite-suave">{s.text}</span>
+                <span class="text-sm font-semibold text-tinta underline underline-offset-4 group-hover:text-carmim">{h.services.more}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- Por que -->
+  <section class="section guilloche-noite">
+    <div class="wrap grid gap-12 lg:grid-cols-[0.9fr_1.4fr]">
+      <h2 class="max-w-[16ch] text-[clamp(1.9rem,3.4vw,2.7rem)]">{h.why.title}</h2>
+      <dl class="grid gap-x-12 gap-y-10 sm:grid-cols-2">
+        {
+          h.why.items.map((w) => (
+            <div class="border-t-2 border-[#e0204f] pt-5">
+              <dt class="text-lg font-bold text-branco">{w.title}</dt>
+              <dd class="mt-2 text-branco/75">{w.text}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+
+  <!-- Como funciona: sequência real, por isso numerada -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="text-[clamp(1.9rem,3.4vw,2.7rem)]">{h.steps.title}</h2>
+      <ol class="mt-12 grid gap-10 md:grid-cols-4 md:gap-6">
+        {
+          h.steps.items.map((s, i) => (
+            <li class="relative">
+              <div class="flex items-center gap-3">
+                <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-tinta text-lg font-bold text-branco">{i + 1}</span>
+                {i < h.steps.items.length - 1 && <span aria-hidden="true" class="hidden h-px flex-1 bg-guilloche md:block" />}
+              </div>
+              <h3 class="mt-5 text-xl">{s.title}</h3>
+              <p class="mt-2 text-grafite-suave">{s.text}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  {
+    h.stats.length > 0 && (
+      <section class="section !pt-0">
+        <dl class="wrap grid gap-8 sm:grid-cols-3">
+          {h.stats.map((s) => (
+            <div class="border-t border-guilloche pt-5">
+              <dt class="text-grafite-suave">{s.label}</dt>
+              <dd class="mt-1 text-4xl font-bold text-tinta">{s.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    )
+  }
+
+  {
+    h.reviews.items.length > 0 && (
+      <section class="section guilloche">
+        <div class="wrap">
+          <h2 class="text-[clamp(1.9rem,3.4vw,2.7rem)]">{h.reviews.title}</h2>
+          <ul class="mt-10 grid gap-6 md:grid-cols-3">
+            {h.reviews.items.map((r) => (
+              <li class="rounded-2xl bg-branco p-7">
+                <blockquote>
+                  <p>{r.text}</p>
+                  <footer class="mt-4 font-semibold text-tinta">{r.name}</footer>
+                </blockquote>
+              </li>
+            ))}
+          </ul>
+          {h.reviews.url && <a href={h.reviews.url} target="_blank" rel="noopener" class="text-link mt-8 inline-block">{h.reviews.link}</a>}
+        </div>
+      </section>
+    )
+  }
+
+  <!-- Cases -->
+  <section class="section !pt-0">
+    <div class="wrap">
+      <a href={href(lang, 'cases')} class="group flex flex-col gap-4 rounded-3xl border border-guilloche bg-branco p-8 md:flex-row md:items-center md:justify-between md:p-12">
+        <div>
+          <h2 class="max-w-[24ch] text-[clamp(1.6rem,2.6vw,2.2rem)] group-hover:text-carmim">{h.casesTeaser.title}</h2>
+          <p class="mt-3 text-grafite-suave">{h.casesTeaser.text}</p>
+        </div>
+        <span class="btn btn-ghost shrink-0">{h.casesTeaser.link}</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Perguntas -->
+  <section class="section !pt-0">
+    <div class="wrap grid gap-10 lg:grid-cols-[0.8fr_1.6fr]">
+      <h2 class="text-[clamp(1.9rem,3.4vw,2.7rem)]">{h.faqTitle}</h2>
+      <Faq client:visible items={t.perguntas.items} sourceLabel={t.source} />
+    </div>
+  </section>
+
+  <CtaBand lang={lang} title={h.final.title} text={h.final.text} />
+  <div class="pt-[clamp(72px,10vw,136px)]"><MapEmbed lang={lang} /></div>
+</Base>
+
+<script>
+  import gsap from 'gsap';
+  import { SplitText } from 'gsap/SplitText';
+  gsap.registerPlugin(SplitText);
+  function intro() {
+    const el = document.querySelector('.hero-title');
+    if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // Chinês não tem espaços entre palavras: anima por linha, que funciona nos três idiomas.
+    SplitText.create(el, {
+      type: 'lines',
+      mask: 'lines',
+      autoSplit: true,
+      onSplit: (self) => gsap.from(self.lines, { yPercent: 100, duration: 0.8, stagger: 0.09, ease: 'power3.out' }),
+    });
+  }
+  document.addEventListener('astro:page-load', intro);
+</script>

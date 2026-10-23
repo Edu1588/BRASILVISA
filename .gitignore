@@ -1,0 +1,14 @@
+# Referências baixadas do site atual (uso interno)
+ref/
+
+# Dependências e build
+node_modules/
+dist/
+.astro/
+
+# Ambiente
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

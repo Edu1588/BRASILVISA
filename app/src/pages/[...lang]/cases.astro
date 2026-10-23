@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { DICTS, langPaths, type Lang } from '../../i18n';
+
+export const getStaticPaths = langPaths;
+const { lang } = Astro.props as { lang: Lang };
+const t = DICTS[lang];
+const c = t.cases;
+---
+
+<Base lang={lang} page="cases" title={c.meta.title} description={c.meta.description}>
+  <PageHero lang={lang} page="cases" label={t.nav.cases} title={c.title} subtitle={c.text} trust={false} />
+
+  <section class="section">
+    <div class="wrap">
+      {
+        c.items.length > 0 ? (
+          <ul class="grid gap-8">
+            {c.items.map((k) => (
+              <li class="rounded-2xl border border-guilloche bg-branco p-7 md:p-10">
+                <p class="font-semibold text-carmim">{k.service}</p>
+                <h2 class="mt-2 text-2xl">{k.title}</h2>
+                <dl class="mt-6 grid gap-6 md:grid-cols-3">
+                  <div><dt class="font-bold text-tinta">{c.labels.situation}</dt><dd class="mt-1">{k.situation}</dd></div>
+                  <div><dt class="font-bold text-tinta">{c.labels.did}</dt><dd class="mt-1">{k.did}</dd></div>
+                  <div><dt class="font-bold text-tinta">{c.labels.result}</dt><dd class="mt-1">{k.result}</dd></div>
+                </dl>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="measure rounded-2xl border border-dashed border-guilloche p-8 text-lg text-grafite-suave">{c.empty}</p>
+        )
+      }
+    </div>
+  </section>
+
+  <CtaBand lang={lang} title={t.home.final.title} text={t.home.final.text} />
+</Base>
