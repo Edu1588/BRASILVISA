@@ -37,14 +37,14 @@ const en: Dict = {
 
   fotos: {
     investidor: 'Handshake over a desk with a contract in an office',
-    imobiliario: 'Modern luxury residential home with contemporary architecture and illuminated garden',
+    imobiliario: 'High-end apartment living room with a balcony overlooking São Paulo buildings and trees',
     reuniao: 'Family reuniting with a hug at the arrivals hall of an airport in Brazil',
     chineses: 'Chinese couple reviewing passports and documents at a consultancy office in São Paulo',
     crnm: 'Hands organizing documents and an ID card on a desk',
     naturalizacao: 'Person seen from behind by a window, holding a document folder',
     vistoEua: 'Hands checking a passport and a boarding pass',
     escritorio: 'Meeting table with document folders and a passport in a bright office',
-    acolhimento: 'Traveler with luggage in a modern airport lounge observing aircraft takeoff in sunlight',
+    acolhimento: 'Consultant greeting a foreign couple with a handshake at the arrivals hall of an airport in Brazil',
   },
 
   nav: {

@@ -62,14 +62,14 @@ const pt = {
 
   fotos: {
     investidor: 'Aperto de mãos sobre uma mesa com contrato em um escritório',
-    imobiliario: 'Residência moderna de alto padrão com arquitetura contemporânea e jardim iluminado',
+    imobiliario: 'Sala de apartamento de alto padrão com varanda e vista para os prédios e árvores de São Paulo',
     reuniao: 'Família se reencontrando com abraço no desembarque de um aeroporto no Brasil',
     chineses: 'Casal chinês conferindo passaportes e documentos em escritório de consultoria em São Paulo',
     crnm: 'Mãos organizando documentos e uma carteira de identificação sobre a mesa',
     naturalizacao: 'Pessoa de costas junto à janela segurando uma pasta de documentos',
     vistoEua: 'Mãos conferindo um passaporte e um cartão de embarque',
     escritorio: 'Mesa de reunião com pastas de documentos e um passaporte em escritório iluminado',
-    acolhimento: 'Passageiro com bagagem em lounge moderno de aeroporto acompanhando decolagem de aeronave',
+    acolhimento: 'Consultora recebe com aperto de mão um casal estrangeiro no desembarque de um aeroporto no Brasil',
   },
 
   nav: {
