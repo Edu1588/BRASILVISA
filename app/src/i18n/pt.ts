@@ -63,7 +63,7 @@ const pt = {
   fotos: {
     investidor: 'Aperto de mãos sobre uma mesa com contrato em um escritório',
     imobiliario: 'Residência moderna de alto padrão com arquitetura contemporânea e jardim iluminado',
-    reuniao: 'Família unida caminhando de mãos dadas ao ar livre em paisagem verde',
+    reuniao: 'Família se reencontrando com abraço no desembarque de um aeroporto no Brasil',
     chineses: 'Casal chinês conferindo passaportes e documentos em escritório de consultoria em São Paulo',
     crnm: 'Mãos organizando documentos e uma carteira de identificação sobre a mesa',
     naturalizacao: 'Pessoa de costas junto à janela segurando uma pasta de documentos',

@@ -38,7 +38,7 @@ const en: Dict = {
   fotos: {
     investidor: 'Handshake over a desk with a contract in an office',
     imobiliario: 'Modern luxury residential home with contemporary architecture and illuminated garden',
-    reuniao: 'Family walking together holding hands outdoors across an open field',
+    reuniao: 'Family reuniting with a hug at the arrivals hall of an airport in Brazil',
     chineses: 'Chinese couple reviewing passports and documents at a consultancy office in São Paulo',
     crnm: 'Hands organizing documents and an ID card on a desk',
     naturalizacao: 'Person seen from behind by a window, holding a document folder',

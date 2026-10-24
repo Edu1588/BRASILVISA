@@ -38,7 +38,7 @@ const zh: Dict = {
   fotos: {
     investidor: '办公室里，双方在放有合同的桌面上握手',
     imobiliario: '现代高档豪宅建筑与雅致花园景观',
-    reuniao: '一家人携手漫步在户外草地的温馨合影',
+    reuniao: '一家人在巴西机场到达大厅相拥团聚',
     chineses: '一对中国夫妇在圣保罗的咨询办公室核对护照和文件',
     crnm: '双手在桌上整理文件和一张身份证件',
     naturalizacao: '一人背对镜头站在窗边，手持文件夹',
