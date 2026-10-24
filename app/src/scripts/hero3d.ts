@@ -133,7 +133,7 @@ export async function mountHero3D() {
   const stage = document.querySelector<HTMLElement>('.hero-stage');
   const svg = stage?.querySelector<SVGSVGElement>('svg.hero-doc');
   if (!stage || !svg) return;
-  if (!window.matchMedia('(min-width: 1024px)').matches) return;
+  if (!window.matchMedia('(min-width: 640px)').matches) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if (!webglOk()) return;
 
@@ -223,8 +223,8 @@ export async function mountHero3D() {
       const float = Math.sin(t * 0.9 + i * 1.3) * 4;
       p.mesh.position.set(p.base.x, p.base.y - (1 - enter) * 90 + float * enter, p.base.z);
       p.mesh.rotation.set(
-        -current.y * 0.12 * p.depthFactor + Math.sin(t * 0.6 + i) * 0.02,
-        current.x * 0.18 * p.depthFactor + Math.cos(t * 0.5 + i) * 0.025,
+        -current.y * 0.22 * p.depthFactor + Math.sin(t * 0.6 + i) * 0.02,
+        current.x * 0.28 * p.depthFactor + Math.cos(t * 0.5 + i) * 0.025,
         p.rotZ + (1 - enter) * (i === 0 ? -0.25 : 0.12),
       );
       p.mesh.scale.setScalar(0.92 + 0.08 * enter);

@@ -86,12 +86,48 @@ const mrz2 = '0000000<0BRA0000000<<<<<<<<<<<<<<<0';
 </div>
 
 <style>
+  .hero-stage {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  .hero-stage .hero-doc {
+    position: relative;
+    transform-origin: center center;
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.35s ease;
+    will-change: transform;
+    animation: heroFloat 6s ease-in-out infinite;
+  }
+  @keyframes heroFloat {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-8px) rotate(0.6deg);
+    }
+  }
+  .hero-stage:hover .hero-doc {
+    filter: drop-shadow(0 32px 44px rgba(0, 0, 24, 0.65));
+  }
+  .hero-stage .hd-passport,
+  .hero-stage .hd-card,
+  .hero-stage .hd-plane {
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .hero-stage:hover .hd-passport {
+    transform: translate(398px, 0px) rotate(10deg);
+  }
+  .hero-stage:hover .hd-card {
+    transform: translate(6px, 112px) rotate(-1.5deg);
+  }
+  .hero-stage:hover .hd-plane {
+    transform: translate(594px, 60px) rotate(-38deg) scale(1.1);
+  }
   .hero-stage :global(.hero-3d) {
     position: absolute;
     pointer-events: none;
     filter: drop-shadow(0 28px 32px rgb(0 0 24 / 0.5));
   }
-  .hero-stage .hero-doc { position: relative; }
   .hero-stage:global(.is-3d) :global(.hd-card),
   .hero-stage:global(.is-3d) :global(.hd-passport) { visibility: hidden; }
 </style>
@@ -104,23 +140,60 @@ const mrz2 = '0000000<0BRA0000000<<<<<<<<<<<<<<<0';
   function play() {
     const svg = document.querySelector('.hero-doc');
     if (!svg || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    gsap
-      .timeline({ defaults: { ease: 'power3.out' } })
-      .from('.hd-passport', { y: 40, rotate: 18, opacity: 0, duration: 0.9, svgOrigin: '507 168' })
-      .from('.hd-card', { y: 50, opacity: 0, duration: 0.9, svgOrigin: '270 280' }, '<0.12')
-      .from('.hd-check', { drawSVG: '0%', duration: 0.85, ease: 'power2.inOut' }, '-=0.25')
-      .from('.hd-plane', { opacity: 0, x: -30, y: 26, duration: 0.5 }, '-=0.3');
+    try {
+      gsap
+        .timeline({ defaults: { ease: 'power3.out' } })
+        .from('.hd-passport', { y: 40, rotate: 18, opacity: 0, duration: 0.9, svgOrigin: '507 168' })
+        .from('.hd-card', { y: 50, opacity: 0, duration: 0.9, svgOrigin: '270 280' }, '<0.12')
+        .from('.hd-check', { drawSVG: '0%', duration: 0.85, ease: 'power2.inOut' }, '-=0.25')
+        .from('.hd-plane', { opacity: 0, x: -30, y: 26, duration: 0.5 }, '-=0.3');
+    } catch {}
   }
+
+  function initInteractiveHover() {
+    const stage = document.querySelector<HTMLElement>('.hero-stage');
+    const doc = stage?.querySelector<HTMLElement>('.hero-doc');
+    if (!stage || !doc) return;
+
+    const onPointerMove = (e: PointerEvent) => {
+      const rect = stage.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+      const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+      const rotX = -y * 14;
+      const rotY = x * 16;
+      doc.style.transform = `perspective(1000px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) translateY(-10px) scale(1.04)`;
+    };
+
+    const onPointerLeave = () => {
+      doc.style.transform = '';
+    };
+
+    stage.addEventListener('pointermove', onPointerMove);
+    stage.addEventListener('pointerleave', onPointerLeave);
+
+    return () => {
+      stage.removeEventListener('pointermove', onPointerMove);
+      stage.removeEventListener('pointerleave', onPointerLeave);
+    };
+  }
+
   let hero3d: Promise<typeof import('../scripts/hero3d')> | undefined;
+  let hoverCleanup: (() => void) | undefined;
+
   document.addEventListener('astro:page-load', () => {
     play();
-    // O 3D carrega depois, só em telas grandes; até lá (ou se falhar) o SVG segue visível.
-    if (document.querySelector('.hero-stage') && window.matchMedia('(min-width: 1024px)').matches) {
+    hoverCleanup?.();
+    hoverCleanup = initInteractiveHover();
+
+    // O 3D carrega a partir de 640px caso WebGL esteja disponível
+    if (document.querySelector('.hero-stage') && window.matchMedia('(min-width: 640px)').matches) {
       hero3d = import('../scripts/hero3d');
       hero3d.then((m) => m.mountHero3D()).catch(() => {});
     }
   });
+
   document.addEventListener('astro:before-swap', () => {
+    hoverCleanup?.();
     hero3d?.then((m) => m.unmountHero3D()).catch(() => {});
   });
 </script>

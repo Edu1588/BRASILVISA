@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
@@ -8,6 +8,9 @@ export default defineConfig({
   site: 'https://brasillvisa.com.br',
   trailingSlash: 'ignore',
   devToolbar: { enabled: false },
+  image: {
+    service: passthroughImageService(),
+  },
   // CSP com hashes gerados pelo Astro para os scripts e estilos inline (ilhas, ClientRouter).
   security: {
     csp: {

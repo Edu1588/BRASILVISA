@@ -27,8 +27,14 @@ const WA: Record<ServiceKey, keyof Dict['wa']> = {
   investidor: 'investidor', imobiliario: 'imobiliario', reuniao: 'reuniao', chineses: 'chineses',
   crnm: 'crnm', naturalizacao: 'naturalizacao', vistoEua: 'vistoEua',
 };
-const FOTO: Partial<Record<ServiceKey, keyof Dict['fotos']>> = {
-  investidor: 'investidor', crnm: 'crnm', naturalizacao: 'naturalizacao', vistoEua: 'vistoEua',
+const FOTO: Record<ServiceKey, keyof Dict['fotos']> = {
+  investidor: 'investidor',
+  imobiliario: 'imobiliario',
+  reuniao: 'reuniao',
+  chineses: 'chineses',
+  crnm: 'crnm',
+  naturalizacao: 'naturalizacao',
+  vistoEua: 'vistoEua',
 };
 const others = SERVICES.filter((k) => k !== key);
 const faqLd = {

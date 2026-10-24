@@ -37,10 +37,14 @@ const zh: Dict = {
 
   fotos: {
     investidor: '办公室里，双方在放有合同的桌面上握手',
+    imobiliario: '现代高档豪宅建筑与雅致花园景观',
+    reuniao: '一家人携手漫步在户外草地的温馨合影',
+    chineses: '国际商务会议高端圆桌与中外代表洽谈现场',
     crnm: '双手在桌上整理文件和一张身份证件',
     naturalizacao: '一人背对镜头站在窗边，手持文件夹',
     vistoEua: '双手核对护照和登机牌',
     escritorio: '明亮办公室中的会议桌，桌上放着文件夹和一本护照',
+    acolhimento: '现代机场候机厅内携带行李的旅客与起飞航班',
   },
 
   nav: {

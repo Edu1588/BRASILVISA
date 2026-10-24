@@ -37,10 +37,14 @@ const en: Dict = {
 
   fotos: {
     investidor: 'Handshake over a desk with a contract in an office',
+    imobiliario: 'Modern luxury residential home with contemporary architecture and illuminated garden',
+    reuniao: 'Family walking together holding hands outdoors across an open field',
+    chineses: 'Executive international business conference table with delegates and official document folders',
     crnm: 'Hands organizing documents and an ID card on a desk',
     naturalizacao: 'Person seen from behind by a window, holding a document folder',
     vistoEua: 'Hands checking a passport and a boarding pass',
     escritorio: 'Meeting table with document folders and a passport in a bright office',
+    acolhimento: 'Traveler with luggage in a modern airport lounge observing aircraft takeoff in sunlight',
   },
 
   nav: {
