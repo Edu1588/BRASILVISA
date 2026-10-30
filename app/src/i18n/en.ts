@@ -75,8 +75,8 @@ const en: Dict = {
   footer: {
     company: 'BrasilVisa Assessoria Empresarial Ltda',
     cnpj: 'CNPJ 38.076.921/0001-00',
-    hq: 'Head office: Av. Marquês de São Vicente, 230, Cj 1619, Barra Funda, São Paulo SP, 01139-000',
-    branch: "Branch: Rua Hugo D'Antola, 146, Piso Superior, Sala B, Água Branca, São Paulo SP",
+    hq: 'Head office: Rua José Versolato, 101, 12th floor, suites 1236/1239, Centro, São Bernardo do Campo SP, 09750-730',
+    branch: "Branch: Rua Hugo D'Antola, 146, Piso Superior, Sala B, Lapa, São Paulo SP (across from the Federal Police headquarters)",
     legal:
       'BrasilVisa is a private immigration consultancy. We are not affiliated with the Federal Police (Polícia Federal), the Ministry of Justice and Public Security, the Ministry of Foreign Affairs (Itamaraty), the Central Bank of Brazil, or the US Embassy or consulates. Decisions on visas, residence permits and naturalization rest solely with the authorities, and no outcome is guaranteed. Government fees are paid directly to the government and are not part of our fees.',
     privacy: 'Privacy Policy',
@@ -247,7 +247,7 @@ const en: Dict = {
 
     reuniao: {
       label: 'Family reunification',
-      card: 'Bring your spouse, children and parents to live with you in Brazil.',
+      card: 'Bring your spouse, partner, children, parents, grandparents, grandchildren or siblings to live with you in Brazil.',
       meta: {
         title: 'Family reunification visa for Brazil | BrasilVisa',
         description: 'Bring your spouse, children, parents or siblings to live with you in Brazil. Documents, apostille, translation and application follow-up.',
@@ -304,26 +304,26 @@ const en: Dict = {
 
     chineses: {
       label: 'Chinese citizens',
-      card: 'Business, investment and family reunification visas, with service in Chinese.',
+      card: 'Residence through work, investment or family reunification, with service in Chinese.',
       meta: {
-        title: 'Brazil for Chinese citizens: visits, investment, family',
-        description: 'Visa exemption for Chinese citizens until December 31, 2026, residence through investment and family reunification. Service in Chinese in São Paulo.',
+        title: 'Brazil for Chinese citizens: work, investment, family',
+        description: 'Residence in Brazil for Chinese citizens through work, investment or family reunification. Service in Chinese, Portuguese and English.',
       },
       hero: {
-        title: 'Brazil for Chinese citizens: visits, investment and family, with service in Chinese.',
+        title: 'Brazil for Chinese citizens: work, investment and family, with service in Chinese.',
         subtitle: 'We explain the entry and residence rules and guide you through every step in Chinese, Portuguese or English.',
       },
       blocks: [
         {
           type: 'steps',
-          title: 'Three paths',
+          title: 'Three paths to residence',
           items: [
-            { title: 'Visits and business', text: 'Since May 11, 2026, Chinese citizens with an ordinary passport can visit Brazil without a visa for up to 30 days, for tourism or business, without working. Valid until December 31, 2026, unless officially extended. To stay longer, a visa is required.' },
+            { title: 'Work', text: 'Residence for those with a job offer or a contract with a company in Brazil.' },
             { title: 'Investment', text: 'Investor residence from R$ 500,000 in a Brazilian company, or by buying property from R$ 1 million.' },
             { title: 'Family reunification', text: 'For those already living in Brazil who want to bring their family.' },
           ],
-          src: SRC.pequim,
-          srcLabel: 'Embassy of Brazil in Beijing',
+          src: SRC.lei13445,
+          srcLabel: 'Lei 13.445/2017, art. 30',
         },
         {
           type: 'text',
@@ -336,6 +336,13 @@ const en: Dict = {
           type: 'text',
           title: 'Documents from China',
           paragraphs: ['China joined the Apostille Convention on November 7, 2023. Chinese documents need an apostille and a sworn translation into Portuguese.'],
+        },
+        {
+          type: 'text',
+          title: 'Visiting Brazil',
+          paragraphs: ['Since May 11, 2026, Chinese citizens with an ordinary passport can visit Brazil without a visa for up to 30 days, without working. The rule is valid until December 31, 2026, unless officially extended. To live or work in Brazil, a residence permit is required.'],
+          src: SRC.pequim,
+          srcLabel: 'Embassy of Brazil in Beijing',
         },
       ],
       faq: [
@@ -358,7 +365,7 @@ const en: Dict = {
       },
       hero: {
         title: 'Your CRNM without the headache: registration, renewal and regularization.',
-        subtitle: 'We prepare your file according to the legal basis of your residence and follow every step until the card is in your hands. Office across from the Federal Police in Água Branca, São Paulo.',
+        subtitle: 'We prepare your file according to the legal basis of your residence and follow every step until the card is in your hands. Office across from the Federal Police headquarters in Lapa, São Paulo.',
       },
       blocks: [
         {
@@ -393,7 +400,7 @@ const en: Dict = {
             'We identify the right legal basis for your application.',
             'We build the document checklist for your profile.',
             'We review forms and details before submission.',
-            'We guide you on the GRU payment slip and the appointment.',
+            'We handle the Federal Police appointment.',
             'We prepare you for the in-person appointment.',
             'We follow the application until you pick up your card.',
           ],
@@ -500,12 +507,12 @@ const en: Dict = {
   quemSomos: {
     meta: {
       title: 'About us | BrasilVisa, immigration consultancy in São Paulo',
-      description: 'Meet BrasilVisa, an immigration consultancy in São Paulo founded by Clariane Alcantara, with two offices in the city.',
+      description: 'Meet BrasilVisa, an immigration consultancy in São Paulo founded by Clariane Alcantara, with a head office in São Bernardo do Campo and a branch in São Paulo.',
     },
     title: 'BrasilVisa: immigration consultancy in São Paulo.',
     text: 'BrasilVisa advises foreigners who want to invest, live or regularize their status in Brazil. Founded by Clariane Alcantara, with a background in International and Immigration Law.',
     years: '', // PREENCHER: anos de atuação (o site atual diz 9 em algumas páginas e 10 em outras)
-    addresses: 'Two offices in São Paulo, one of them across from the Federal Police in Água Branca.',
+    addresses: 'Head office in São Bernardo do Campo and a branch in Lapa, São Paulo, across from the Federal Police headquarters.',
     howTitle: 'How we work',
     how: [
       { title: 'Follow-up', text: 'You always know which stage your process is at.' },

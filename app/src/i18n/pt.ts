@@ -100,8 +100,8 @@ const pt = {
   footer: {
     company: 'BrasilVisa Assessoria Empresarial Ltda',
     cnpj: 'CNPJ 38.076.921/0001-00',
-    hq: 'Matriz: Av. Marquês de São Vicente, 230, Cj 1619, Barra Funda, São Paulo SP, 01139-000',
-    branch: "Filial: Rua Hugo D'Antola, 146, Piso Superior, Sala B, Água Branca, São Paulo SP",
+    hq: 'Matriz: Rua José Versolato, 101, 12º andar, salas 1236/1239, Centro, São Bernardo do Campo SP, 09750-730',
+    branch: "Filial: Rua Hugo D'Antola, 146, Piso Superior, Sala B, Lapa, São Paulo SP (em frente à sede da Polícia Federal)",
     legal:
       'A BrasilVisa é uma empresa privada de consultoria em imigração. Não temos vínculo com a Polícia Federal, o Ministério da Justiça e Segurança Pública, o Itamaraty, o Banco Central, a Embaixada ou os consulados dos Estados Unidos. Decisões sobre vistos, autorizações de residência e naturalização cabem exclusivamente às autoridades, e nenhum resultado é garantido. Taxas oficiais são pagas diretamente ao governo e não fazem parte dos nossos honorários.',
     privacy: 'Política de Privacidade',
@@ -272,7 +272,7 @@ const pt = {
 
     reuniao: {
       label: 'Reunião familiar',
-      card: 'Traga cônjuge, filhos e pais para morar com você no Brasil.',
+      card: 'Traga cônjuge, companheiro, filhos, pais, avós, netos ou irmãos para morar com você no Brasil.',
       meta: {
         title: 'Visto de reunião familiar no Brasil | BrasilVisa',
         description:
@@ -330,27 +330,27 @@ const pt = {
 
     chineses: {
       label: 'Cidadãos chineses',
-      card: 'Visto de negócios, investimento e reunião familiar, com atendimento em chinês.',
+      card: 'Residência por trabalho, investimento ou reunião familiar, com atendimento em chinês.',
       meta: {
-        title: 'Brasil para chineses: visita, investimento e família',
+        title: 'Brasil para chineses: trabalho, investimento e família',
         description:
-          'Isenção de visto para chineses até 31/12/2026, residência por investimento e reunião familiar. Atendimento em chinês, português e inglês em São Paulo.',
+          'Residência no Brasil para cidadãos chineses por trabalho, investimento ou reunião familiar. Atendimento em chinês, português e inglês.',
       },
       hero: {
-        title: 'Brasil para cidadãos chineses: visita, investimento e família, com atendimento em chinês.',
+        title: 'Brasil para cidadãos chineses: trabalho, investimento e família, com atendimento em chinês.',
         subtitle: 'Explicamos as regras de entrada e de residência e acompanhamos cada etapa em chinês, português ou inglês.',
       },
       blocks: [
         {
           type: 'steps',
-          title: 'Três caminhos',
+          title: 'Três caminhos para a residência',
           items: [
-            { title: 'Visita e negócios', text: 'Desde 11/05/2026, cidadãos chineses com passaporte comum podem visitar o Brasil sem visto por até 30 dias, para turismo ou negócios, sem trabalhar. Vale até 31/12/2026, salvo prorrogação oficial. Para ficar mais tempo, é preciso visto.' },
+            { title: 'Trabalho', text: 'Residência para quem tem oferta de emprego ou contrato com empresa no Brasil.' },
             { title: 'Investimento', text: 'Residência como investidor a partir de R$ 500 mil em empresa brasileira, ou pela compra de imóvel a partir de R$ 1 milhão.' },
             { title: 'Reunião familiar', text: 'Para quem já mora no Brasil e quer trazer a família.' },
           ],
-          src: SRC.pequim,
-          srcLabel: 'Embaixada do Brasil em Pequim',
+          src: SRC.lei13445,
+          srcLabel: 'Lei 13.445/2017, art. 30',
         },
         {
           type: 'text',
@@ -363,6 +363,13 @@ const pt = {
           type: 'text',
           title: 'Documentos da China',
           paragraphs: ['A China aderiu à Convenção da Apostila em 07/11/2023. Documentos chineses precisam de apostila e de tradução juramentada para o português.'],
+        },
+        {
+          type: 'text',
+          title: 'Visitas ao Brasil',
+          paragraphs: ['Desde 11/05/2026, cidadãos chineses com passaporte comum podem visitar o Brasil sem visto por até 30 dias, sem trabalhar. A regra vale até 31/12/2026, salvo prorrogação oficial. Para morar ou trabalhar no Brasil, é preciso autorização de residência.'],
+          src: SRC.pequim,
+          srcLabel: 'Embaixada do Brasil em Pequim',
         },
       ],
       faq: [
@@ -381,11 +388,11 @@ const pt = {
       card: 'Registro, renovação e regularização da carteira de estrangeiro.',
       meta: {
         title: 'CRNM (antigo RNE): registro e renovação | BrasilVisa',
-        description: 'Registro, renovação e regularização da CRNM, o antigo RNE. Prazos e taxas oficiais explicados. Escritório em frente à PF da Água Branca, São Paulo.',
+        description: 'Registro, renovação e regularização da CRNM, o antigo RNE. Prazos e taxas oficiais explicados. Escritório em frente à sede da PF, na Lapa, São Paulo.',
       },
       hero: {
         title: 'CRNM sem dor de cabeça: registro, renovação e regularização.',
-        subtitle: 'Montamos seu processo conforme a sua base legal de residência e acompanhamos cada etapa até a carteira na sua mão. Escritório em frente à Polícia Federal da Água Branca, em São Paulo.',
+        subtitle: 'Montamos seu processo conforme a sua base legal de residência e acompanhamos cada etapa até a carteira na sua mão. Escritório em frente à sede da Polícia Federal, na Lapa, em São Paulo.',
       },
       blocks: [
         {
@@ -420,7 +427,7 @@ const pt = {
             'Identificamos a base legal certa para o seu pedido.',
             'Montamos o checklist de documentos do seu perfil.',
             'Revisamos formulários e dados antes do envio.',
-            'Orientamos a GRU e o agendamento.',
+            'Cuidamos do agendamento na Polícia Federal.',
             'Preparamos você para o atendimento presencial.',
             'Acompanhamos o pedido até a retirada.',
           ],
@@ -527,12 +534,12 @@ const pt = {
   quemSomos: {
     meta: {
       title: 'Quem somos | BrasilVisa, imigração em São Paulo',
-      description: 'Conheça a BrasilVisa, consultoria em imigração em São Paulo fundada por Clariane Alcantara, com dois endereços na capital paulista.',
+      description: 'Conheça a BrasilVisa, consultoria em imigração em São Paulo fundada por Clariane Alcantara, com matriz em São Bernardo do Campo e filial em São Paulo.',
     },
     title: 'BrasilVisa: consultoria em imigração em São Paulo.',
     text: 'A BrasilVisa orienta estrangeiros que querem investir, morar ou regularizar sua situação no Brasil. Fundada por Clariane Alcantara, com trajetória em Direito Internacional e Migratório.',
     years: '', // PREENCHER: anos de atuação (o site atual diz 9 em algumas páginas e 10 em outras)
-    addresses: 'Dois endereços em São Paulo, um deles em frente à Polícia Federal da Água Branca.',
+    addresses: 'Matriz em São Bernardo do Campo e filial na Lapa, em São Paulo, em frente à sede da Polícia Federal.',
     howTitle: 'Como trabalhamos',
     how: [
       { title: 'Acompanhamento', text: 'Você sabe em que etapa o seu processo está.' },

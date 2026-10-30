@@ -75,8 +75,8 @@ const zh: Dict = {
   footer: {
     company: 'BrasilVisa Assessoria Empresarial Ltda',
     cnpj: 'CNPJ 38.076.921/0001-00',
-    hq: '总部：Av. Marquês de São Vicente, 230, Cj 1619, Barra Funda, São Paulo SP, 01139-000',
-    branch: "分部：Rua Hugo D'Antola, 146, Piso Superior, Sala B, Água Branca, São Paulo SP",
+    hq: '总部：Rua José Versolato, 101, 12º andar, salas 1236/1239, Centro, São Bernardo do Campo SP, 09750-730',
+    branch: "分部：Rua Hugo D'Antola, 146, Piso Superior, Sala B, Lapa, São Paulo SP（联邦警察局总部对面）",
     legal:
       'BrasilVisa是一家私营移民咨询公司，与联邦警察、司法和公共安全部、外交部、巴西中央银行以及美国驻巴西大使馆或领事馆均无隶属关系。签证、居留许可和入籍的审批完全由相关政府机关决定，我们不保证任何结果。政府规费由您直接缴纳给政府，不包含在我们的服务费中。',
     privacy: '隐私政策',
@@ -250,7 +250,7 @@ const zh: Dict = {
 
     reuniao: {
       label: '家庭团聚',
-      card: '接配偶、子女和父母来巴西与您一起生活。',
+      card: '接配偶、伴侣、子女、父母、祖父母、孙辈或兄弟姐妹来巴西与您一起生活。',
       meta: {
         title: '巴西家庭团聚签证 | BrasilVisa',
         description:
@@ -308,27 +308,27 @@ const zh: Dict = {
 
     chineses: {
       label: '中国公民专区',
-      card: '商务、投资和家庭团聚签证，全程中文服务。',
+      card: '通过工作、投资或家庭团聚获得居留，全程中文服务。',
       meta: {
-        title: '中国公民赴巴西：访问、投资与家庭团聚 | BrasilVisa',
+        title: '中国公民赴巴西：工作、投资与家庭团聚 | BrasilVisa',
         description:
-          '中国公民免签入境巴西有效至2026年12月31日，另可办理投资居留和家庭团聚。圣保罗办公室，提供中文、葡萄牙语和英语服务。',
+          '中国公民可通过工作、投资或家庭团聚获得巴西居留。提供中文、葡萄牙语和英语服务。',
       },
       hero: {
-        title: '中国公民赴巴西：访问、投资与家庭团聚，全程中文服务。',
+        title: '中国公民赴巴西：工作、投资与家庭团聚，全程中文服务。',
         subtitle: '我们为您讲解入境和居留规定，并以中文、葡萄牙语或英语陪您办好每一步。',
       },
       blocks: [
         {
           type: 'steps',
-          title: '三种途径',
+          title: '三种居留途径',
           items: [
-            { title: '访问与商务', text: '自2026年5月11日起，持普通护照的中国公民可免签入境巴西，每次停留最长30天，可用于旅游或商务活动，但不得工作。该政策有效至2026年12月31日，除非官方宣布延期。如需停留更久，须办理签证。' },
+            { title: '工作', text: '适合已获得巴西工作邀约或与巴西公司签订合同的人士。' },
             { title: '投资', text: '向巴西公司投资50万雷亚尔起，可获得投资者居留；或购买100万雷亚尔起的房产获得居留。' },
             { title: '家庭团聚', text: '适合已在巴西生活、希望把家人接来团聚的人士。' },
           ],
-          src: SRC.pequim,
-          srcLabel: '巴西驻北京大使馆',
+          src: SRC.lei13445,
+          srcLabel: 'Lei 13.445/2017, art. 30',
         },
         {
           type: 'text',
@@ -341,6 +341,13 @@ const zh: Dict = {
           type: 'text',
           title: '来自中国的文件',
           paragraphs: ['中国已于2023年11月7日加入《海牙公约》（取消外国公文认证要求的公约）。中国出具的文件须办理海牙认证（Apostille），并在巴西进行葡萄牙语宣誓翻译。'],
+        },
+        {
+          type: 'text',
+          title: '访问巴西',
+          paragraphs: ['自2026年5月11日起，持普通护照的中国公民可免签入境巴西，最长停留30天，但不得工作。该政策有效至2026年12月31日，除非官方宣布延期。如需在巴西居住或工作，须办理居留许可。'],
+          src: SRC.pequim,
+          srcLabel: '巴西驻北京大使馆',
         },
       ],
       faq: [
@@ -360,11 +367,11 @@ const zh: Dict = {
       meta: {
         title: 'CRNM居留卡（原RNE）：登记与续期 | BrasilVisa',
         description:
-          'CRNM居留卡（原RNE）的登记、续期和合法化，详细说明官方期限和规费。办公室位于圣保罗Água Branca联邦警察局对面。',
+          'CRNM居留卡（原RNE）的登记、续期和合法化，详细说明官方期限和规费。办公室位于圣保罗Lapa区联邦警察局总部对面。',
       },
       hero: {
         title: '轻松办好CRNM居留卡：登记、续期与合法化。',
-        subtitle: '我们根据您的居留法律依据准备材料，并全程跟进，直到您拿到居留卡。办公室位于圣保罗Água Branca联邦警察局对面。',
+        subtitle: '我们根据您的居留法律依据准备材料，并全程跟进，直到您拿到居留卡。办公室位于圣保罗Lapa区联邦警察局总部对面。',
       },
       blocks: [
         {
@@ -399,7 +406,7 @@ const zh: Dict = {
             '确定适用于您申请的法律依据。',
             '根据您的情况制定文件清单。',
             '提交前审核表格和信息。',
-            '指导GRU缴费单和预约。',
+            '为您办理联邦警察局预约。',
             '帮助您做好现场办理的准备。',
             '全程跟进，直到您领取居留卡。',
           ],
@@ -506,12 +513,12 @@ const zh: Dict = {
   quemSomos: {
     meta: {
       title: '关于我们 | BrasilVisa，圣保罗移民咨询',
-      description: '了解BrasilVisa：由Clariane Alcantara创立的圣保罗移民咨询公司，在圣保罗市设有两处办公地点。',
+      description: '了解BrasilVisa：由Clariane Alcantara创立的圣保罗移民咨询公司，总部位于São Bernardo do Campo，并在圣保罗设有分部。',
     },
     title: 'BrasilVisa：圣保罗移民咨询。',
     text: 'BrasilVisa为希望在巴西投资、生活或办理身份合法化的外国人提供咨询服务。公司由Clariane Alcantara创立，她在国际法和移民法领域拥有丰富经验。',
     years: '', // PREENCHER: anos de atuação (o site atual diz 9 em algumas páginas e 10 em outras)
-    addresses: '在圣保罗设有两处办公地点，其中一处位于Água Branca联邦警察局对面。',
+    addresses: '总部位于São Bernardo do Campo，分部位于圣保罗Lapa区，就在联邦警察局总部对面。',
     howTitle: '我们的工作方式',
     how: [
       { title: '全程跟进', text: '您随时了解自己的申请进展到哪一步。' },

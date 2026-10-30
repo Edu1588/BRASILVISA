@@ -9,7 +9,7 @@ export const DICTS: Record<Lang, Dict> = { pt, en, zh };
 export const WHATSAPP = '5511949736011';
 export const WHATSAPP_DISPLAY = '(11) 94973-6011';
 export const EMAIL = 'contato@brasillvisa.com.br';
-export const ADDRESS_QUERY = 'Av. Marquês de São Vicente, 230, Barra Funda, São Paulo SP, 01139-000';
+export const ADDRESS_QUERY = 'Rua José Versolato, 101, Centro, São Bernardo do Campo SP, 09750-730';
 export const SOCIAL = {
   instagram: 'https://www.instagram.com/brasillvisa/',
   facebook: 'https://www.facebook.com/Brasillvisa',
