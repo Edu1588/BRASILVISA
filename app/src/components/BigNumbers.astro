@@ -56,11 +56,11 @@ const labels = {
       </p>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center items-start">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 text-center items-start">
       {
         labels.stats.map((s, idx) => (
-          <div class:list={['flex flex-col items-center', idx === 4 ? 'col-span-2 md:col-span-1' : '']}>
-            <span class="font-display text-4xl lg:text-5xl font-extrabold text-[#cb3438] tabular-nums tracking-tight">
+          <div class:list={['flex flex-col items-center', idx === 4 ? 'col-span-2 md:col-span-1' : '', 'min-w-0']}>
+            <span class="font-display text-[clamp(2rem,3.2vw,3rem)] leading-none font-extrabold text-[#cb3438] tabular-nums tracking-tight whitespace-nowrap">
               {s.num}
             </span>
             <div class="w-12 h-0.5 bg-[#cb3438]/50 my-3"></div>
