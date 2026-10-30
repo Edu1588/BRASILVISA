@@ -24,6 +24,9 @@ export default defineConfig({
         "form-action 'self'",
         "object-src 'none'",
       ],
+      // Hash do script inline da troca de idioma (Base.astro): scripts is:inline não entram no cálculo automático.
+      // Se o conteúdo desse script mudar, recalcular o hash.
+      scriptDirective: { hashes: ['sha256-/+TK/jE9MtX0YjADkWy1sUyhcakcDxBzo49P1nUpDd4='] },
     },
   },
   integrations: [

@@ -92,6 +92,7 @@ const contactLabel = {
                 ]}
                 aria-current={l === lang ? 'true' : undefined}
                 data-astro-reload
+                data-lang-switch
               >
                 <span class="text-sm leading-none" aria-hidden="true">{langFlags[l]}</span>
                 <span>{langShort[l]}</span>
@@ -188,6 +189,33 @@ const contactLabel = {
     });
   }
 
+  // Troca de idioma: a página atual desfoca e some antes de carregar o outro idioma;
+  // a nova página entra desfocada e ganha foco (classe lang-entering, ver Base.astro).
+  function setupLangSwitch() {
+    document.querySelectorAll<HTMLAnchorElement>('a[data-lang-switch]').forEach((link) => {
+      if (link.dataset.bound || link.getAttribute('aria-current') === 'true') return;
+      link.dataset.bound = '1';
+      link.addEventListener('click', (e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        e.preventDefault();
+        try {
+          sessionStorage.setItem('bv-lang-switch', '1');
+        } catch {}
+        document.documentElement.classList.add('lang-leaving');
+        window.setTimeout(() => {
+          window.location.href = link.href;
+        }, 380);
+      });
+    });
+  }
+
   setupMobileMenu();
-  document.addEventListener('astro:page-load', setupMobileMenu);
+  setupLangSwitch();
+  document.addEventListener('astro:page-load', () => {
+    setupMobileMenu();
+    setupLangSwitch();
+  });
+  // Volta do cache do navegador (botão voltar): tira o desfoque que ficou na página.
+  window.addEventListener('pageshow', () => document.documentElement.classList.remove('lang-leaving'));
 </script>

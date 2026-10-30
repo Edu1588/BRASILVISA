@@ -171,6 +171,22 @@
   }
 }
 
+/* Troca de idioma: a página sai desfocando e a nova entra saindo do desfoque.
+   O efeito vai nos filhos do body (não no body) para não tirar do lugar os elementos fixos. */
+html.lang-leaving body > * {
+  filter: blur(12px);
+  opacity: 0.2;
+  transition: filter 0.38s ease, opacity 0.38s ease;
+}
+html.lang-leaving body { pointer-events: none; }
+html.lang-entering body > * {
+  animation: lang-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes lang-in {
+  from { filter: blur(12px); opacity: 0.2; }
+  to { filter: none; opacity: 1; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

@@ -37,6 +37,16 @@ const ogImage = new URL(`/og/${lang}/${ogKey}.png`, site).href;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Chegada por troca de idioma: marca a página antes de pintar para entrar desfocada (ver Header.astro). -->
+    <script is:inline>
+      try {
+        if (sessionStorage.getItem('bv-lang-switch')) {
+          sessionStorage.removeItem('bv-lang-switch');
+          document.documentElement.classList.add('lang-entering');
+          setTimeout(function () { document.documentElement.classList.remove('lang-entering'); }, 900);
+        }
+      } catch (e) {}
+    </script>
     <title>{title}</title>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, follow" />}
