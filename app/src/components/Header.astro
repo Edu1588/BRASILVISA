@@ -1,5 +1,6 @@
 ---
 import WaIcon from './WaIcon.astro';
+import FlagIcon from './FlagIcon.astro';
 import { DICTS, LANGS, SERVICES, href, waLink, type Lang, type PageKey } from '../i18n';
 import type { Dict } from '../i18n/pt';
 
@@ -7,7 +8,6 @@ interface Props { lang: Lang; page: PageKey | '404'; wa?: keyof Dict['wa'] }
 const { lang, page, wa = 'geral' } = Astro.props;
 const t = DICTS[lang];
 const langShort: Record<Lang, string> = { pt: 'PT', en: 'EN', zh: '中文' };
-const langFlags: Record<Lang, string> = { pt: '🇧🇷', en: '🇺🇸', zh: '🇨🇳' };
 const target = page === '404' ? 'home' : page;
 
 const contactLabel = {
@@ -94,7 +94,7 @@ const contactLabel = {
                 data-astro-reload
                 data-lang-switch
               >
-                <span class="text-sm leading-none" aria-hidden="true">{langFlags[l]}</span>
+                <FlagIcon lang={l} class="h-3.5 w-5 shrink-0 rounded-[2px] shadow-[0_0_0_1px_rgb(0_0_0/0.08)]" />
                 <span>{langShort[l]}</span>
               </a>
             </li>

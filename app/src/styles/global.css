@@ -171,19 +171,19 @@
   }
 }
 
-/* Troca de idioma: a página sai desfocando e a nova entra saindo do desfoque.
-   O efeito vai nos filhos do body (não no body) para não tirar do lugar os elementos fixos. */
-html.lang-leaving body > * {
-  filter: blur(12px);
-  opacity: 0.2;
+/* Troca de idioma: só os textos desfocam ao sair e voltam ao foco ao chegar; fotos, ícones e fundos ficam parados.
+   Pega o elemento de texto mais externo (sem repetir o desfoque nos filhos) e ignora blocos que contêm imagem. */
+html.lang-leaving body { pointer-events: none; }
+html.lang-leaving :is(h1, h2, h3, h4, p, li, dt, dd, label, th, td, address, blockquote, summary, a, button, span):not(:has(img, svg, picture, canvas, iframe)):not(:is(h1, h2, h3, h4, p, li, dt, dd, label, th, td, address, blockquote, summary, a, button, span):not(:has(img, svg, picture, canvas, iframe)) *) {
+  filter: blur(8px);
+  opacity: 0.15;
   transition: filter 0.38s ease, opacity 0.38s ease;
 }
-html.lang-leaving body { pointer-events: none; }
-html.lang-entering body > * {
+html.lang-entering :is(h1, h2, h3, h4, p, li, dt, dd, label, th, td, address, blockquote, summary, a, button, span):not(:has(img, svg, picture, canvas, iframe)):not(:is(h1, h2, h3, h4, p, li, dt, dd, label, th, td, address, blockquote, summary, a, button, span):not(:has(img, svg, picture, canvas, iframe)) *) {
   animation: lang-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 @keyframes lang-in {
-  from { filter: blur(12px); opacity: 0.2; }
+  from { filter: blur(8px); opacity: 0.15; }
   to { filter: none; opacity: 1; }
 }
 
