@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   // Domínio provisório: trocar pelo domínio internacional (.com) quando for definido.
-  site: 'https://brasillvisa.com.br',
+  site: 'https://www.brasillvisa.com',
   trailingSlash: 'ignore',
   devToolbar: { enabled: false },
   image: {

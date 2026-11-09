@@ -4,4 +4,4 @@ Disallow: /obrigado
 Disallow: /en/obrigado
 Disallow: /zh/obrigado
 
-Sitemap: https://brasillvisa.com.br/sitemap.xml
+Sitemap: https://www.brasillvisa.com/sitemap.xml
