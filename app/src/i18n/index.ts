@@ -18,11 +18,12 @@ export const SOCIAL = {
 /** Ordem de prioridade das landing pages (visto de investidor é o serviço principal). */
 export const SERVICES: ServiceKey[] = ['investidor', 'imobiliario', 'reuniao', 'chineses', 'crnm', 'naturalizacao', 'vistoEua'];
 
-export type PageKey = 'home' | 'quemSomos' | 'obrigado' | 'privacidade' | ServiceKey;
+export type PageKey = 'home' | 'quemSomos' | 'faq' | 'obrigado' | 'privacidade' | ServiceKey;
 
 export const SLUGS: Record<PageKey, string> = {
   home: '',
   quemSomos: 'quem-somos',
+  faq: 'perguntas-frequentes',
   obrigado: 'obrigado',
   privacidade: 'privacidade',
   investidor: 'visto-de-investidor',
@@ -48,6 +49,7 @@ export function pageLabel(lang: Lang, page: PageKey): string {
   if (page === 'home') return t.nav.home;
   if (page === 'quemSomos') return t.nav.quemSomos;
   if (page === 'privacidade') return t.footer.privacy;
+  if (page === 'faq') return t.faqPage.title;
   if (page === 'obrigado') return t.obrigado.title;
   return t.services[page].label;
 }

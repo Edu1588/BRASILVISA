@@ -584,6 +584,13 @@ const pt = {
     back: 'Voltar ao início',
   },
 
+  faqPage: {
+    meta: { title: 'Perguntas frequentes sobre vistos e residência | BrasilVisa', description: 'Respostas sobre visto de investidor, imóvel, reunião familiar, CRNM, naturalização e visto americano, com as fontes oficiais de cada regra.' },
+    title: 'Perguntas frequentes',
+    intro: 'Reunimos aqui as dúvidas mais comuns de cada serviço, com o link da norma oficial quando houver. Se a sua situação não estiver aqui, fale com a gente no WhatsApp.',
+    seeService: 'Ver a página do serviço',
+  },
+
   notFound: {
     meta: { title: 'Página não encontrada | BrasilVisa', description: 'Esta página não existe.' },
     title: 'Esta página não existe.',

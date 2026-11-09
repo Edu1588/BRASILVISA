@@ -563,6 +563,13 @@ const zh: Dict = {
     back: '返回首页',
   },
 
+  faqPage: {
+    meta: { title: '巴西签证与居留常见问题 | BrasilVisa', description: '关于投资者签证、购房居留、家庭团聚、CRNM、入籍和美国签证的常见问题解答，并附官方法规来源。' },
+    title: '常见问题',
+    intro: '这里汇总了各项服务最常见的问题，如有官方法规会附上链接。如果没有找到您的情况，请通过 WhatsApp 联系我们。',
+    seeService: '查看服务页面',
+  },
+
   notFound: {
     meta: { title: '页面不存在 | BrasilVisa', description: '此页面不存在。' },
     title: '此页面不存在。',

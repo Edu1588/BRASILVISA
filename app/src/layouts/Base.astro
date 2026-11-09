@@ -28,7 +28,7 @@ const site = Astro.site!;
 const canonical = page === '404' ? undefined : new URL(href(lang, page), site).href;
 const hreflang = { pt: 'pt-BR', en: 'en', zh: 'zh-CN' } as const;
 // Imagem Open Graph gerada por tools/og.py; páginas sem imagem própria usam a da home.
-const ogKey = page === '404' || page === 'obrigado' ? 'home' : page;
+const ogKey = page === '404' || page === 'obrigado' || page === 'faq' ? 'home' : page;
 const ogImage = new URL(`/og/${lang}/${ogKey}.png`, site).href;
 ---
 
@@ -93,6 +93,11 @@ const ogImage = new URL(`/og/${lang}/${ogKey}.png`, site).href;
       import Lenis from 'lenis';
       import { ScrollTrigger } from 'gsap/ScrollTrigger';
       import { startMotion, stopMotion } from '../scripts/motion';
+      import { inject } from '@vercel/analytics';
+      import { trackAiReferral } from '../scripts/ai-referral';
+      // Vercel Web Analytics: sem cookies; o painel da Vercel mostra visitas e sites de origem.
+      inject({ mode: import.meta.env.PROD ? 'production' : 'development' });
+      trackAiReferral();
       let lenis: Lenis | null = null;
       function start() {
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;

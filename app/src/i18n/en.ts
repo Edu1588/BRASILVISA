@@ -557,6 +557,13 @@ const en: Dict = {
     back: 'Back to home',
   },
 
+  faqPage: {
+    meta: { title: 'FAQ on Brazilian visas and residence | BrasilVisa', description: 'Answers about the investor visa, real estate residence, family reunion, CRNM, naturalization and US visa, with the official source for each rule.' },
+    title: 'Frequently asked questions',
+    intro: 'The most common questions about each service, with a link to the official rule whenever there is one. If your case is not here, message us on WhatsApp.',
+    seeService: 'Go to the service page',
+  },
+
   notFound: {
     meta: { title: 'Page not found | BrasilVisa', description: 'This page does not exist.' },
     title: 'This page does not exist.',

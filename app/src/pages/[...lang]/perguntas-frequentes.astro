@@ -1,0 +1,43 @@
+---
+// Página única de perguntas frequentes: junta as perguntas de cada serviço, agrupadas, com o schema FAQPage.
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import Faq from '../../components/Faq.tsx';
+import { DICTS, SERVICES, href, langPaths, type Lang } from '../../i18n';
+
+export const getStaticPaths = langPaths;
+const { lang } = Astro.props as { lang: Lang };
+const t = DICTS[lang];
+const f = t.faqPage;
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  inLanguage: t.lang,
+  url: new URL(href(lang, 'faq'), Astro.site).href,
+  mainEntity: SERVICES.flatMap((k) =>
+    t.services[k].faq.map((i) => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })),
+  ),
+};
+---
+
+<Base lang={lang} page="faq" title={f.meta.title} description={f.meta.description}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  <PageHero lang={lang} page="faq" label={f.title} title={f.title} subtitle={f.intro} wa="geral" />
+
+  <div class="wrap section space-y-16">
+    {
+      SERVICES.map((k) => (
+        <section id={k} class="scroll-mt-28">
+          <h2 class="text-2xl">{t.services[k].label}</h2>
+          <div class="mt-6">
+            <Faq client:visible items={t.services[k].faq} sourceLabel={t.source} />
+          </div>
+          <a href={href(lang, k)} class="text-link mt-5 inline-block">{f.seeService}</a>
+        </section>
+      ))
+    }
+  </div>
+
+  <CtaBand lang={lang} title={t.common.talk} text={t.common.reply24} />
+</Base>

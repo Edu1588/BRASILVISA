@@ -1,13 +1,12 @@
 ---
-// Dados estruturados da empresa (schema local), presentes em todas as páginas.
+// Dados estruturados da empresa (schema local) e do site, presentes em todas as páginas.
 // Horário de funcionamento e coordenadas ficam de fora até o cliente confirmar.
 import { DICTS, EMAIL, SOCIAL, href, type Lang } from '../i18n';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const site = Astro.site!;
 const t = DICTS[lang];
-const ld = {
-  '@context': 'https://schema.org',
+const empresa = {
   '@type': 'ProfessionalService',
   '@id': new URL('/#empresa', site).href,
   name: 'BrasilVisa',
@@ -27,11 +26,40 @@ const ld = {
     postalCode: '09750-730',
     addressCountry: 'BR',
   },
+  // Filial na Lapa, em frente à sede da Polícia Federal.
+  location: {
+    '@type': 'Place',
+    name: 'BrasilVisa Lapa',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: "Rua Hugo D'Antola, 146, Piso Superior, Sala B, Lapa",
+      addressLocality: 'São Paulo',
+      addressRegion: 'SP',
+      addressCountry: 'BR',
+    },
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    telephone: '+55-11-94973-6011',
+    email: EMAIL,
+    availableLanguage: ['Portuguese', 'English', 'Chinese'],
+  },
   areaServed: { '@type': 'Country', name: 'Brasil' },
   availableLanguage: ['pt-BR', 'en', 'zh-CN'],
   founder: { '@type': 'Person', name: 'Clariane Alcantara' },
   sameAs: Object.values(SOCIAL),
 };
+const website = {
+  '@type': 'WebSite',
+  '@id': new URL('/#site', site).href,
+  name: 'BrasilVisa',
+  url: new URL(href(lang, 'home'), site).href,
+  inLanguage: t.lang,
+  description: t.home.meta.description,
+  publisher: { '@id': empresa['@id'] },
+};
+const ld = { '@context': 'https://schema.org', '@graph': [empresa, website] };
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(ld)} />
