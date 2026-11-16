@@ -37,6 +37,18 @@ const ogImage = new URL(`/og/${lang}/${ogKey}.png`, site).href;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {
+      import.meta.env.PROD && (
+        <Fragment>
+          <script is:inline async src="https://www.googletagmanager.com/gtm.js?id=GTM-TV527NM9" />
+          <script is:inline>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          </script>
+        </Fragment>
+      )
+    }
     <!-- Chegada por troca de idioma: marca a página antes de pintar para entrar desfocada (ver Header.astro). -->
     <script is:inline>
       try {

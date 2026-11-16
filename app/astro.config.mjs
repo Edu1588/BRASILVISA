@@ -16,17 +16,25 @@ export default defineConfig({
     csp: {
       directives: [
         "default-src 'self'",
-        "img-src 'self' data:",
+        // Google Tag Manager, Google Analytics e Google Ads (medição de conversões e remarketing).
+        "img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://www.google.com https://www.google.com.br https://*.doubleclick.net https://www.googleadservices.com",
         "font-src 'self'",
-        "connect-src 'self'",
-        "frame-src https://maps.google.com https://www.google.com",
+        "connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.google.com https://www.google.com.br https://*.doubleclick.net https://www.googleadservices.com",
+        "frame-src https://maps.google.com https://www.google.com https://td.doubleclick.net https://www.googletagmanager.com",
         "base-uri 'self'",
         "form-action 'self'",
         "object-src 'none'",
       ],
-      // Hash do script inline da troca de idioma (Base.astro): scripts is:inline não entram no cálculo automático.
-      // Se o conteúdo desse script mudar, recalcular o hash.
-      scriptDirective: { hashes: ['sha256-/+TK/jE9MtX0YjADkWy1sUyhcakcDxBzo49P1nUpDd4='] },
+      // Hashes dos scripts inline de Base.astro (troca de idioma e dataLayer do Google): scripts is:inline não entram no
+      // cálculo automático. Se o conteúdo de algum mudar, recalcular (ver como: extrair da dist e rodar sha256 em base64).
+      // O resource libera só o carregador do Google Tag Manager.
+      scriptDirective: {
+        resources: ["'self'", 'https://www.googletagmanager.com', 'https://googleads.g.doubleclick.net', 'https://www.googleadservices.com'],
+        hashes: [
+          'sha256-/+TK/jE9MtX0YjADkWy1sUyhcakcDxBzo49P1nUpDd4=', // troca de idioma
+          'sha256-NAL3rRRiXp54QCTT9K5cgECWu4ld8LnqbpMSUUuHtP8=', // dataLayer / gtag do Google
+        ],
+      },
     },
   },
   integrations: [
