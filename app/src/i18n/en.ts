@@ -564,6 +564,15 @@ const en: Dict = {
     seeService: 'Go to the service page',
   },
 
+  cookies: {
+    title: 'Cookies and privacy',
+    text: 'We use Google cookies to measure site usage and ad results. They are only turned on if you accept.',
+    accept: 'Accept',
+    decline: 'Decline',
+    settings: 'Cookie settings',
+    policy: 'Privacy Policy',
+  },
+
   notFound: {
     meta: { title: 'Page not found | BrasilVisa', description: 'This page does not exist.' },
     title: 'This page does not exist.',
@@ -574,15 +583,15 @@ const en: Dict = {
     meta: { title: 'Privacy Policy | BrasilVisa', description: 'How BrasilVisa collects, uses and protects your personal data, in accordance with the LGPD.' },
     title: 'Privacy Policy',
     controller: 'Data controller: BrasilVisa Assessoria Empresarial Ltda, CNPJ 38.076.921/0001-00.',
-    updated: 'Last updated: October 23, 2026.',
+    updated: 'Last updated: November 16, 2026.',
     sections: [
-      { title: 'What data we collect', text: 'Name, phone number, email and the message you send through the form or WhatsApp. If you accept, audience measurement cookies.' },
+      { title: 'What data we collect', text: 'Name, phone number, email and the message you send through the form or WhatsApp. If you accept, Google measurement and advertising cookies.' },
       { title: 'How we use it', text: 'To reply to your enquiry and, if you hire us, to provide the consulting service.' },
       { title: 'Legal basis', text: 'Brazilian General Data Protection Law (Lei 13.709/2018): consent, to reply to your enquiry, and performance of a contract, for the consulting service you hire.' },
-      { title: 'Who we share it with', text: 'We never sell data. We share it only with government bodies when you yourself request the service, and with hosting and messaging providers needed to serve you.' },
+      { title: 'Who we share it with', text: 'We never sell data. We share it only with government bodies when you yourself request the service, with hosting and messaging providers needed to serve you and, if you accept cookies, with Google.' },
       { title: 'How long we keep it', text: 'For as long as needed to serve you and to meet legal obligations. [prazo de guarda a preencher]' },
       { title: 'Your rights', text: 'You can request access to, correction, deletion and portability of your data, and withdraw your consent at any time.' },
-      { title: 'Cookies', text: 'Measurement cookies are only used with your consent. You can refuse or delete cookies in your browser settings.' },
+      { title: 'Cookies', text: 'Google cookies (Google Tag Manager and Google Ads, for measurement and advertising) are only loaded after you accept the cookie notice. You can change your choice at any time under "Cookie settings" in the site footer, and also delete cookies in your browser settings.' },
       { title: 'Data protection officer', text: 'Data protection officer: [nome a preencher]. Email: contato@brasillvisa.com.br.' },
     ],
   },

@@ -25,15 +25,12 @@ export default defineConfig({
         "form-action 'self'",
         "object-src 'none'",
       ],
-      // Hashes dos scripts inline de Base.astro (troca de idioma e dataLayer do Google): scripts is:inline não entram no
-      // cálculo automático. Se o conteúdo de algum mudar, recalcular (ver como: extrair da dist e rodar sha256 em base64).
-      // O resource libera só o carregador do Google Tag Manager.
+      // Hash do script inline da troca de idioma (Base.astro): scripts is:inline não entram no cálculo automático.
+      // Se o conteúdo desse script mudar, recalcular (extrair da dist e rodar sha256 em base64).
+      // Os resources liberam o carregador do Google Tag Manager, que scripts/consent.ts injeta só após o aceite.
       scriptDirective: {
         resources: ["'self'", 'https://www.googletagmanager.com', 'https://googleads.g.doubleclick.net', 'https://www.googleadservices.com'],
-        hashes: [
-          'sha256-/+TK/jE9MtX0YjADkWy1sUyhcakcDxBzo49P1nUpDd4=', // troca de idioma
-          'sha256-NAL3rRRiXp54QCTT9K5cgECWu4ld8LnqbpMSUUuHtP8=', // dataLayer / gtag do Google
-        ],
+        hashes: ['sha256-/+TK/jE9MtX0YjADkWy1sUyhcakcDxBzo49P1nUpDd4='],
       },
     },
   },

@@ -9,6 +9,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import MobileCta from '../components/MobileCta.astro';
 import WaFloat from '../components/WaFloat.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 import SchemaOrg from '../components/SchemaOrg.astro';
 import { DICTS, LANGS, href, type Lang, type PageKey } from '../i18n';
 import type { Dict } from '../i18n/pt';
@@ -37,18 +38,6 @@ const ogImage = new URL(`/og/${lang}/${ogKey}.png`, site).href;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {
-      import.meta.env.PROD && (
-        <Fragment>
-          <script is:inline async src="https://www.googletagmanager.com/gtm.js?id=GTM-TV527NM9" />
-          <script is:inline>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-          </script>
-        </Fragment>
-      )
-    }
     <!-- Chegada por troca de idioma: marca a página antes de pintar para entrar desfocada (ver Header.astro). -->
     <script is:inline>
       try {
@@ -101,14 +90,18 @@ const ogImage = new URL(`/og/${lang}/${ogKey}.png`, site).href;
     <Footer lang={lang} />
     <MobileCta lang={lang} wa={wa} />
     <WaFloat lang={lang} wa={wa} />
+    <CookieBanner lang={lang} />
     <script>
       import Lenis from 'lenis';
       import { ScrollTrigger } from 'gsap/ScrollTrigger';
       import { startMotion, stopMotion } from '../scripts/motion';
       import { inject } from '@vercel/analytics';
       import { trackAiReferral } from '../scripts/ai-referral';
+      import { initConsent, bindConsent } from '../scripts/consent';
       // Vercel Web Analytics: sem cookies; o painel da Vercel mostra visitas e sites de origem.
       inject({ mode: import.meta.env.PROD ? 'production' : 'development' });
+      // Cookies: Google desligado até o aceite (ver scripts/consent.ts). Vem antes do trackAiReferral, que usa o gtag.
+      initConsent();
       trackAiReferral();
       let lenis: Lenis | null = null;
       function start() {
@@ -118,6 +111,7 @@ const ogImage = new URL(`/og/${lang}/${ogKey}.png`, site).href;
         lenis.on('scroll', ScrollTrigger.update);
       }
       document.addEventListener('astro:page-load', () => {
+        bindConsent();
         start();
         startMotion();
       });

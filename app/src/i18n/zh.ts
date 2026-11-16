@@ -570,6 +570,15 @@ const zh: Dict = {
     seeService: '查看服务页面',
   },
 
+  cookies: {
+    title: 'Cookie 与隐私',
+    text: '我们使用 Google 的 Cookie 来统计网站使用情况并衡量广告效果。只有在您同意后才会启用。',
+    accept: '接受',
+    decline: '拒绝',
+    settings: 'Cookie 设置',
+    policy: '隐私政策',
+  },
+
   notFound: {
     meta: { title: '页面不存在 | BrasilVisa', description: '此页面不存在。' },
     title: '此页面不存在。',
@@ -580,15 +589,15 @@ const zh: Dict = {
     meta: { title: '隐私政策 | BrasilVisa', description: 'BrasilVisa如何依据LGPD收集、使用和保护您的个人数据。' },
     title: '隐私政策',
     controller: '数据控制者：BrasilVisa Assessoria Empresarial Ltda，CNPJ 38.076.921/0001-00。',
-    updated: '最后更新：2026年10月23日。',
+    updated: '最后更新：2026年11月16日。',
     sections: [
-      { title: '我们收集哪些数据', text: '您通过表单或WhatsApp提供的姓名、电话、电子邮箱和留言内容。如您同意，还包括用于受众统计的Cookie。' },
+      { title: '我们收集哪些数据', text: '您通过表单或WhatsApp提供的姓名、电话、电子邮箱和留言内容。如您同意，还包括Google用于统计和广告的Cookie。' },
       { title: '数据用途', text: '用于回复您的咨询；如您委托我们，则用于提供咨询服务。' },
       { title: '法律依据', text: '巴西《通用数据保护法》（Lei 13.709/2018）：回复咨询基于您的同意；提供已委托的咨询服务基于合同履行。' },
-      { title: '数据共享', text: '我们绝不出售数据。仅在您本人申请相关服务时与政府机关共享，以及与提供服务所必需的主机托管和通讯服务商共享。' },
+      { title: '数据共享', text: '我们绝不出售数据。仅在您本人申请相关服务时与政府机关共享，与提供服务所必需的主机托管和通讯服务商共享；如您同意Cookie，还会与Google共享。' },
       { title: '保存期限', text: '在提供服务和履行法定义务所需的期限内保存。[prazo de guarda a preencher]' },
       { title: '您的权利', text: '您可以要求访问、更正、删除和转移您的数据，并可随时撤回同意。' },
-      { title: 'Cookie', text: '统计类Cookie仅在您同意后使用。您可以在浏览器设置中拒绝或删除Cookie。' },
+      { title: 'Cookie', text: 'Google的Cookie（Google Tag Manager和Google Ads，用于统计和广告）仅在您接受Cookie提示后才会加载。您可随时通过网站页脚的“Cookie 设置”更改选择，也可在浏览器设置中删除Cookie。' },
       { title: '数据保护负责人', text: '数据保护负责人：[nome a preencher]。电子邮箱：contato@brasillvisa.com.br。' },
     ],
   },

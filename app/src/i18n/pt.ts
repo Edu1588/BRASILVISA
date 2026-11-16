@@ -591,6 +591,15 @@ const pt = {
     seeService: 'Ver a página do serviço',
   },
 
+  cookies: {
+    title: 'Cookies e privacidade',
+    text: 'Usamos cookies do Google para medir o uso do site e os resultados dos anúncios. Eles só são ativados se você aceitar.',
+    accept: 'Aceitar',
+    decline: 'Recusar',
+    settings: 'Preferências de cookies',
+    policy: 'Política de Privacidade',
+  },
+
   notFound: {
     meta: { title: 'Página não encontrada | BrasilVisa', description: 'Esta página não existe.' },
     title: 'Esta página não existe.',
@@ -601,15 +610,15 @@ const pt = {
     meta: { title: 'Política de Privacidade | BrasilVisa', description: 'Como a BrasilVisa coleta, usa e protege seus dados pessoais, conforme a LGPD.' },
     title: 'Política de Privacidade',
     controller: 'Responsável pelo tratamento: BrasilVisa Assessoria Empresarial Ltda, CNPJ 38.076.921/0001-00.',
-    updated: 'Última atualização: 23/10/2026.',
+    updated: 'Última atualização: 16/11/2026.',
     sections: [
-      { title: 'Quais dados coletamos', text: 'Nome, telefone, email e a mensagem que você envia pelo formulário ou pelo WhatsApp. Se você aceitar, cookies de medição de audiência.' },
+      { title: 'Quais dados coletamos', text: 'Nome, telefone, email e a mensagem que você envia pelo formulário ou pelo WhatsApp. Se você aceitar, cookies do Google de medição e de publicidade.' },
       { title: 'Para que usamos', text: 'Para responder ao seu contato e, se você contratar, para prestar a consultoria.' },
       { title: 'Base legal', text: 'Lei Geral de Proteção de Dados (Lei 13.709/2018): consentimento, para responder ao contato, e execução de contrato, para a consultoria contratada.' },
-      { title: 'Com quem compartilhamos', text: 'Nunca vendemos dados. Compartilhamos apenas com órgãos oficiais quando você mesmo pede o serviço, e com fornecedores de hospedagem e mensagens necessários para o atendimento.' },
+      { title: 'Com quem compartilhamos', text: 'Nunca vendemos dados. Compartilhamos apenas com órgãos oficiais quando você mesmo pede o serviço, com fornecedores de hospedagem e mensagens necessários para o atendimento e, se você aceitar os cookies, com o Google.' },
       { title: 'Por quanto tempo guardamos', text: 'Pelo tempo necessário para o atendimento e para cumprir obrigações legais. [prazo de guarda a preencher]' },
       { title: 'Seus direitos', text: 'Você pode pedir acesso, correção, exclusão e portabilidade dos seus dados, e revogar o consentimento a qualquer momento.' },
-      { title: 'Cookies', text: 'Cookies de medição só são usados com o seu consentimento. Você pode recusar ou apagar os cookies nas configurações do navegador.' },
+      { title: 'Cookies', text: 'Os cookies do Google (Google Tag Manager e Google Ads, para medição e publicidade) só são carregados depois que você aceita o aviso de cookies. Você pode mudar a escolha a qualquer momento em "Preferências de cookies", no rodapé do site, e também apagar os cookies nas configurações do navegador.' },
       { title: 'Contato do encarregado', text: 'Encarregado de dados: [nome a preencher]. Email: contato@brasillvisa.com.br.' },
     ],
   },
