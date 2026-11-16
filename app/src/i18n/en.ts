@@ -25,14 +25,14 @@ const en: Dict = {
   source: 'Source',
 
   wa: {
-    geral: 'Hello, I found BrasilVisa through your website and would like some guidance on my case.',
-    investidor: 'Hello, I am interested in the investor visa for Brazil. Could you advise me?',
-    imobiliario: 'Hello, I would like to know about residence in Brazil through buying property.',
-    reuniao: 'Hello, I would like to bring my family to live with me in Brazil.',
-    chineses: 'Hello, I am a Chinese citizen and would like guidance on visas and residence in Brazil.',
-    crnm: 'Hello, I need help with my CRNM (registration, renewal or regularization).',
-    naturalizacao: 'Hello, I would like to know whether I can become a Brazilian citizen.',
-    vistoEua: 'Hello, I would like guidance on a US visa.',
+    geral: 'I came through the website and would like more information',
+    investidor: 'I came through the website and would like more information',
+    imobiliario: 'I came through the website and would like more information',
+    reuniao: 'I came through the website and would like more information',
+    chineses: 'I came through the website and would like more information',
+    crnm: 'I came through the website and would like more information',
+    naturalizacao: 'I came through the website and would like more information',
+    vistoEua: 'I came through the website and would like more information',
   },
 
   fotos: {

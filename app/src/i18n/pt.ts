@@ -50,14 +50,14 @@ const pt = {
   source: 'Fonte',
 
   wa: {
-    geral: 'Olá, vim pelo site da BrasilVisa e gostaria de orientação sobre o meu caso.',
-    investidor: 'Olá, tenho interesse no visto de investidor no Brasil. Pode me orientar?',
-    imobiliario: 'Olá, quero saber sobre residência no Brasil pela compra de imóvel.',
-    reuniao: 'Olá, quero trazer minha família para morar comigo no Brasil.',
-    chineses: 'Olá, sou cidadão chinês e quero orientação sobre visto e residência no Brasil.',
-    crnm: 'Olá, preciso de ajuda com a minha CRNM (registro, renovação ou regularização).',
-    naturalizacao: 'Olá, quero saber se posso me naturalizar brasileiro.',
-    vistoEua: 'Olá, quero orientação para o visto americano.',
+    geral: 'Vim pelo site e gostaria de mais informações',
+    investidor: 'Vim pelo site e gostaria de mais informações',
+    imobiliario: 'Vim pelo site e gostaria de mais informações',
+    reuniao: 'Vim pelo site e gostaria de mais informações',
+    chineses: 'Vim pelo site e gostaria de mais informações',
+    crnm: 'Vim pelo site e gostaria de mais informações',
+    naturalizacao: 'Vim pelo site e gostaria de mais informações',
+    vistoEua: 'Vim pelo site e gostaria de mais informações',
   },
 
   fotos: {
