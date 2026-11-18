@@ -44,7 +44,7 @@ export function trackAiReferral() {
     const source = detect();
     if (!source) return;
     sessionStorage.setItem('bv-ai-ref', source);
-    track('ai_referral', { ai_referral_source: source });
+    if (import.meta.env.PUBLIC_HOSTING !== 'godaddy') track('ai_referral', { ai_referral_source: source });
     const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
     gtag?.('event', 'ai_referral', { ai_referral_source: source });
   } catch {}

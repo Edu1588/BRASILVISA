@@ -7,3 +7,6 @@ coverage/
 .env*
 !.env.example
 .astro/
+
+# Pacote para upload na GoDaddy (gerado, não vai para o Git)
+godaddy/

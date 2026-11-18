@@ -99,7 +99,8 @@ const ogImage = new URL(`/og/${lang}/${ogKey}.png`, site).href;
       import { trackAiReferral } from '../scripts/ai-referral';
       import { initConsent, bindConsent } from '../scripts/consent';
       // Vercel Web Analytics: sem cookies; o painel da Vercel mostra visitas e sites de origem.
-      inject({ mode: import.meta.env.PROD ? 'production' : 'development' });
+      // Fora da Vercel (build para a GoDaddy, com PUBLIC_HOSTING=godaddy) esse script não existe e é omitido.
+      if (import.meta.env.PUBLIC_HOSTING !== 'godaddy') inject({ mode: import.meta.env.PROD ? 'production' : 'development' });
       // Cookies: Google desligado até o aceite (ver scripts/consent.ts). Vem antes do trackAiReferral, que usa o gtag.
       initConsent();
       trackAiReferral();
