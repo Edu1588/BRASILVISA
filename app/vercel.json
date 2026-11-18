@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "brasilvisa.vercel.app" }],
+      "destination": "https://www.brasillvisa.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "brasillvisa.vercel.app" }],
+      "destination": "https://www.brasillvisa.com/$1",
+      "permanent": true
+    }
+  ]
+}
